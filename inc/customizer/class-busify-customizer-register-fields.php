@@ -881,92 +881,9 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'section'  => 'section-blog-pagination',
 				'default'  => 'load-more',
 				'choices'  => array(
-					'numeric'          => esc_html__( 'Numeric Pagination', CODEMANAS_THEME_DOMAIN ),
 					'load-more'        => esc_html__( 'Load More Button Pagination', CODEMANAS_THEME_DOMAIN ),
-					'load-more-scroll' => esc_html__( 'Load More on Scroll', CODEMANAS_THEME_DOMAIN ),
 					'legacy'           => esc_html__( 'Legacy Old/New', CODEMANAS_THEME_DOMAIN ),
 				),
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'typography',
-				'settings'  => 'field-blog-post-pagination-typo',
-				'transport' => 'auto',
-				'label'     => esc_html__( 'Typography', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-blog-pagination',
-				'default'   => array(
-					'color'          => $black_color,
-					'font-size'      => '16px',
-					'letter-spacing' => '0px',
-					'text-transform' => 'none',
-					'font-family'    => 'Ubuntu',
-					'variant'        => '300',
-				),
-				'output'    => [
-					[
-						'element' => '.busify-pagination .nav-links a, .busify-pagination .nav-links span, .busify-pagination a'
-					]
-				]
-			),
-			array(
-				'category' => 'field',
-				'type'     => 'radio-buttonset',
-				'settings' => 'field-pagination-alignment',
-				'label'    => esc_html__( 'Pagination Alignment', CODEMANAS_THEME_DOMAIN ),
-				'section'  => 'section-blog-pagination',
-				'default'  => 'center-align-pagination',
-				'choices'  => [
-					'left-align-pagination'   => esc_html__( 'Left', CODEMANAS_THEME_DOMAIN ),
-					'center-align-pagination' => esc_html__( 'Center', CODEMANAS_THEME_DOMAIN ),
-					'right-align-pagination'  => esc_html__( 'Right', CODEMANAS_THEME_DOMAIN ),
-				],
-			),
-			array(
-				'category'    => 'field',
-				'type'        => 'color',
-				'settings'    => 'field-pagination-background-color',
-				'label'       => esc_html__( 'Background Color', CODEMANAS_THEME_DOMAIN ),
-				'section'     => 'section-blog-pagination',
-				'default'     => $white_color,
-				'transport'   => 'auto',
-				'description' => esc_html__( 'This is only applied on numeric pagination.', CODEMANAS_THEME_DOMAIN ),
-				'output'      => [
-					[
-						'element'  => '.busify-pagination .page-numbers',
-						'property' => 'background-color'
-					]
-				]
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-pagination-hover-color',
-				'label'     => esc_html__( 'Hover Color', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-blog-pagination',
-				'default'   => $hover_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.busify-pagination a:hover, .busify-pagination span:hover',
-						'property' => 'color'
-					]
-				]
-			),
-			array(
-				'category'    => 'field',
-				'type'        => 'color',
-				'settings'    => 'field-pagination-active-link-color',
-				'label'       => esc_html__( 'Active Pagination Link', CODEMANAS_THEME_DOMAIN ),
-				'section'     => 'section-blog-pagination',
-				'description' => esc_html__( 'This is only applied on numeric pagination.', CODEMANAS_THEME_DOMAIN ),
-				'default'     => $primary_color,
-				'transport'   => 'auto',
-				'output'      => [
-					[
-						'element'  => '.busify-pagination .page-numbers.current',
-						'property' => 'background-color'
-					]
-				]
 			),
 
 			//Single Post

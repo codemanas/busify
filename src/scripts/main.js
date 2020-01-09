@@ -54,8 +54,6 @@ jQuery(function ($) {
             //Ajax load more btn
             if (dom.$paginationType === "load-more") {
                 this.$loadMoreButton.on('click', this.ajaxLoadMorePosts.bind(this));
-            } else if (dom.$paginationType === "load-more-scroll") {
-                $(window).on('scroll.site-content', this.ajaxLoadMorePostsonScroll.bind(this));
             }
 
             //Mobile Sizing
@@ -184,9 +182,6 @@ jQuery(function ($) {
                 beforeSend: function () {
                     if (dom.$paginationType === "load-more") {
                         $(that).text(locales.loading);
-                    } else if (dom.$paginationType === "load-more-scroll") {
-                        $(window).off('scroll.site-content');
-                        $(that).hide().after('<div id="busify-ajax-spinner" class="fa-3x"><i class="fa fa-spinner fa-spin"></i></div>');
                     }
                 },
                 success: function (response) {
@@ -200,15 +195,6 @@ jQuery(function ($) {
                             if (current_page >= parseInt(responseData.max_page)) {
                                 $(that).hide();
                             }
-                        } else if (dom.$paginationType === "load-more-scroll") {
-                            $('#busify-ajax-spinner').remove();
-                            if (responseData.post_html === null || responseData.post_html === "") {
-                                $(window).off('scroll.site-content');
-                                return;
-                            } else {
-                                $(dom.$paginationDiv).prev().after(responseData.post_html);
-                                $(window).on('scroll.site-content', this.ajaxLoadMorePostsonScroll.bind(this));
-                            }
                         }
                     }
                 },
@@ -217,21 +203,6 @@ jQuery(function ($) {
                 },
             });
         },
-
-        /**
-         * Ajax load on scroll
-         */
-        ajaxLoadMorePostsonScroll: function () {
-            var $element = $(document).find('.site-main article').last();
-            var topHeight = $element.offset().top,
-                outerHeight = $element.outerHeight(),
-                windowHeight = $(window).height(),
-                windowScrollHeight = $(window).scrollTop();
-            if (windowScrollHeight > (topHeight + outerHeight - windowHeight)) {
-                this.ajaxLoadMorePosts();
-            }
-        },
-
         /**
          * Open up search overlay
          */

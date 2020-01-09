@@ -13,15 +13,10 @@ if ( ! function_exists( 'busify_pagination' ) ) {
 	 */
 	function busify_pagination() {
 		$pagination = Busify_Theme_Options::get_option( 'field-blog-post-pagination' );
-		$alignment  = Busify_Theme_Options::get_option( 'field-pagination-alignment' );
-		echo '<div class="busify-pagination ' . $alignment . '">';
+		echo '<div class="busify-pagination center-align-pagination">';
 		if ( ! empty( $pagination ) ) {
 			switch ( $pagination ) {
-				case 'numeric':
-					the_posts_pagination( array( 'prev_text' => false, 'next_text' => false ) );
-					break;
 				case 'load-more':
-				case 'load-more-scroll':
 					global $wp_query;
 					$filter       = get_query_var( 's' );
 					$current_page = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
