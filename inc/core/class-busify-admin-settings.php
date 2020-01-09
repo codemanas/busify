@@ -107,7 +107,6 @@ class Busify_Admin_Settings {
                                 </div>
                                 <div class="busify-row">
                                     <div class="busify-column"><i class="dashicons dashicons-format-image"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=custom_logo' ) ); ?>"><?php esc_html_e( 'Upload Logo', CODEMANAS_THEME_DOMAIN ); ?></a></div>
-                                    <div class="busify-column"><i class="dashicons dashicons-marker"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-header-transparent' ) ); ?>"><?php esc_html_e( 'Header Transparency', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                 </div>
                                 <div class="busify-row">
                                     <div class="busify-column"><i class="dashicons dashicons-layout"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-blog-page-layout' ) ); ?>"><?php esc_html_e( 'Blog Page Styles', CODEMANAS_THEME_DOMAIN ); ?></a></div>

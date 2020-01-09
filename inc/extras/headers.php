@@ -99,69 +99,7 @@ function busify_header_logo_attr( $image, $attachment_id, $size, $icon ) {
  * @return mixed
  */
 function busify_transparent_header( $data = array() ) {
-	$transparent_header = Busify_Theme_Options::get_option( 'field-header-transparent' );
-	$busify_options     = array(
-		'field-header-transparent-blog-page'    => Busify_Theme_Options::get_option( 'field-header-transparent-blog-page' ),
-		'field-header-transparent-singular'     => Busify_Theme_Options::get_option( 'field-header-transparent-singular' ),
-		'field-header-transparent-single-page'  => Busify_Theme_Options::get_option( 'field-header-transparent-single-page' ),
-		'field-header-transparent-single-post'  => Busify_Theme_Options::get_option( 'field-header-transparent-single-post' ),
-		'field-header-transparent-archive-page' => Busify_Theme_Options::get_option( 'field-header-transparent-archive-page' ),
-		'field-header-transparent-404'          => Busify_Theme_Options::get_option( 'field-header-transparent-404' ),
-		'field-header-transparent-search-page'  => Busify_Theme_Options::get_option( 'field-header-transparent-search-page' ),
-	);
-
-	//Check if transparent headers setting is on.
-	// $check = flag
-	if ( ! empty( $transparent_header ) ) {
-		$check = true;
-
-		if ( is_front_page() ) {
-			$check = true;
-		} else if ( is_home() ) {
-			//Disable on Blog Listing page
-			if ( ! empty( $busify_options['field-header-transparent-blog-page'] ) ) {
-				$check = false;
-			}
-		} else if ( ! empty( $busify_options['field-header-transparent-singular'] ) ) {
-			//Override Setting on all single pages and posts
-			if ( is_singular() ) {
-				$check = false;
-			}
-		} else if ( is_page() ) {
-			//Disable on Single pages
-			if ( ! empty( $busify_options['field-header-transparent-single-page'] ) ) {
-				$check = false;
-			}
-		} else if ( is_single() ) {
-			//Disable on Single post
-			if ( ! empty( $busify_options['field-header-transparent-single-post'] ) ) {
-				$check = false;
-			}
-		} else if ( is_archive() ) {
-			//Disable on Archives
-			if ( ! empty( $busify_options['field-header-transparent-archive-page'] ) ) {
-				$check = false;
-			}
-		} else if ( is_404() ) {
-			//Disable on 404
-			if ( ! empty( $busify_options['field-header-transparent-404'] ) ) {
-				$check = false;
-			}
-		} else if ( is_search() ) {
-			//Disable on Search
-			if ( ! empty( $busify_options['field-header-transparent-search-page'] ) ) {
-				$check = false;
-			}
-		}
-	} else {
-		$check = false;
-	}
-
-	if ( $check ) {
-		$data[] = 'busify-header-transparent';
-	} else {
-		$data[] = 'busify-no-transparent';
-	}
+	$data[] = 'busify-no-transparent';
 
 	$result = apply_filters( 'busify_masthead_main_class', $data );
 	if ( ! empty( $result ) ) {
