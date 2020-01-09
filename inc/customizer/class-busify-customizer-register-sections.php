@@ -34,16 +34,6 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'panel'    => 'panel-global'
 			),
 
-			//Colors
-			array(
-				'name'        => 'section-global-colors',
-				'category'    => 'section',
-				'priority'    => 3,
-				'title'       => esc_html__( 'Colors', CODEMANAS_THEME_DOMAIN ),
-				'panel'       => 'panel-global',
-				'description' => __( 'This can be overridden via elementor custom colors. Except for body background color.', CODEMANAS_THEME_DOMAIN )
-			),
-
 			//Buttons
 			array(
 				'name'     => 'section-global-buttons',
