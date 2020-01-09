@@ -53,25 +53,22 @@ function busify_masthead_logo() {
  * Head navigation primary menu
  */
 function busify_masthead_nav() {
-	$disable_menu = Busify_Theme_Options::get_option( 'field-header-menu-disable' );
-	if ( ! $disable_menu ) {
-		?>
-        <div class="busify-mobile-menu-buttons">
-            <div class="busify-button-wrap">
-                <div class="navigation-toggler-icon"><span class="icon"></span></div>
-            </div>
+	?>
+    <div class="busify-mobile-menu-buttons">
+        <div class="busify-button-wrap">
+            <div class="navigation-toggler-icon"><span class="icon"></span></div>
         </div>
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'primary-menu',
-				'menu_id'        => 'primary-menu',
-				'menu_class'     => 'primary-menu',
-			) );
-			?>
-        </nav>
+    </div>
+    <nav id="site-navigation" class="main-navigation" role="navigation">
 		<?php
-	}
+		wp_nav_menu( array(
+			'theme_location' => 'primary-menu',
+			'menu_id'        => 'primary-menu',
+			'menu_class'     => 'primary-menu',
+		) );
+		?>
+    </nav>
+	<?php
 }
 
 /**

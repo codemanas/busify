@@ -16,40 +16,10 @@ add_filter( 'busify_masthead_main_class', 'busify_header_menu_layouts' );
  * @return mixed
  */
 function busify_header_menu_layouts( $data ) {
-	$layouts = Busify_Theme_Options::get_option( 'field-header-layout' );
-	if ( ! wp_is_mobile() ) {
-		switch ( $layouts ) {
-			case 'busify-left-logo':
-				$data[] = 'busify-left-logo';
-
-				//Adding further Menus
-				add_filter( 'wp_nav_menu_items', 'busify_after_menu_items_adds_last', 10, 2 );
-				break;
-			case 'busify-right-logo':
-				$data[] = 'busify-right-logo';
-
-				//Adding further Menus
-				add_filter( 'wp_nav_menu_items', 'busify_after_menu_items_adds_before', 10, 2 );
-				break;
-			case 'busify-center-logo';
-				$data[] = 'busify-center-logo';
-
-				//Adding further Menus
-				add_filter( 'wp_nav_menu_items', 'busify_after_menu_items_adds_last', 10, 2 );
-				break;
-			default:
-				$data[] = 'busify-left-logo';
-
-				//Adding further Menus
-				add_filter( 'wp_nav_menu_items', 'busify_after_menu_items_adds_last', 10, 2 );
-				break;
-		}
-	} else {
-		$data[] = 'busify-left-logo';
-		//Adding further Menus
-		add_filter( 'wp_nav_menu_items', 'busify_after_menu_items_adds_last', 10, 2 );
-	}
-
+	
+	$data[] = 'busify-left-logo';
+	//Adding further Menus
+	add_filter( 'wp_nav_menu_items', 'busify_after_menu_items_adds_last', 10, 2 );
 	return $data;
 }
 

@@ -80,8 +80,6 @@ jQuery(function ($) {
             //Mobile Menu
             if (this.loadDocumentWidth(767, true)) {
                 $('.site-header').removeClass('busify-right-logo busify-left-logo busify-center-logo');
-            } else {
-                $('.site-header').addClass(busify_options.header_layout);
             }
         },
 

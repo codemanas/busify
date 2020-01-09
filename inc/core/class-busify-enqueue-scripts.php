@@ -130,7 +130,6 @@ if ( ! class_exists( 'Busify_Enqueue_Scripts' ) ) {
 					'enable'         => Busify_Theme_Options::get_option( 'field-header-menu-sticky' ),
 					'disable_mobile' => Busify_Theme_Options::get_option( 'field-header-menu-sticky-mobile-disable' )
 				),
-				'header_layout'       => Busify_Theme_Options::get_option( 'field-header-layout' ),
 				'menu_settings'       => array(
 					'disable_search' => Busify_Theme_Options::get_option( 'field-header-menu-disable-search' )
 				),

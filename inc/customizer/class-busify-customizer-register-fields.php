@@ -245,14 +245,6 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 			),
 			array(
 				'category' => 'field',
-				'type'     => 'checkbox',
-				'settings' => 'field-header-menu-disable',
-				'label'    => esc_html__( 'Disable Menu', CODEMANAS_THEME_DOMAIN ),
-				'section'  => 'section-header-primary',
-				'default'  => false,
-			),
-			array(
-				'category' => 'field',
 				'type'     => 'custom',
 				'settings' => 'field-horizontal-line-container-transparent-header-divider',
 				'section'  => 'section-header-transparent-header',
@@ -411,43 +403,12 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				]
 			),
 
-			//Header Primiary Menu
-			array(
-				'category'  => 'field',
-				'type'      => 'select',
-				'settings'  => 'field-header-layout',
-				'transport' => 'auto',
-				'label'     => '<span class="customizer-busify-title wp-ui-text-highlight nomargin">' . __( 'Header Layout', CODEMANAS_THEME_DOMAIN ) . '</span>',
-				'section'   => 'section-header-primary',
-				'default'   => 'busify-left-logo',
-				'priority'  => 1,
-				'choices'   => array(
-					'busify-left-logo'   => esc_attr__( 'Left logo right menu', CODEMANAS_THEME_DOMAIN ),
-					'busify-right-logo'  => esc_attr__( 'Right logo left menu', CODEMANAS_THEME_DOMAIN ),
-					'busify-center-logo' => esc_attr__( 'Center Logo', CODEMANAS_THEME_DOMAIN ),
-				)
-			),
 			array(
 				'category'        => 'field',
 				'type'            => 'custom',
 				'settings'        => 'field-horizontal-line-container-3',
 				'section'         => 'section-header-primary',
 				'default'         => '<span class="customizer-busify-title wp-ui-text-highlight nomargin">' . __( 'Menu Section', CODEMANAS_THEME_DOMAIN ) . '</span>',
-				'active_callback' => array(
-					array(
-						'setting'  => 'field-header-menu-disable',
-						'operator' => '===',
-						'value'    => false,
-					),
-				),
-			),
-			array(
-				'category' => 'field',
-				'type'     => 'checkbox',
-				'settings' => 'field-header-menu-disable',
-				'label'    => esc_html__( 'Disable Menu', CODEMANAS_THEME_DOMAIN ),
-				'section'  => 'section-header-primary',
-				'default'  => false,
 			),
 			array(
 				'category'        => 'field',
@@ -456,13 +417,6 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'label'           => esc_html__( 'Disable Search', CODEMANAS_THEME_DOMAIN ),
 				'section'         => 'section-header-primary',
 				'default'         => false,
-				'active_callback' => array(
-					array(
-						'setting'  => 'field-header-menu-disable',
-						'operator' => '===',
-						'value'    => false,
-					),
-				),
 			),
 			array(
 				'category'        => 'field',
@@ -473,13 +427,6 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'section'         => 'section-header-primary',
 				'default'         => 'none',
 				'choices'         => $this->lastMenuItems(),
-				'active_callback' => array(
-					array(
-						'setting'  => 'field-header-menu-disable',
-						'operator' => '===',
-						'value'    => false,
-					),
-				),
 			),
 			array(
 				'category'        => 'field',
@@ -687,206 +634,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 					),
 				),
 			),
-			array(
-				'category' => 'field',
-				'type'     => 'custom',
-				'settings' => 'field-horizontal-line-container-4',
-				'section'  => 'section-header-primary',
-				'default'  => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Menu Colors', CODEMANAS_THEME_DOMAIN ) . '</span>',
-				'priority' => 10,
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-menu',
-				'section'   => 'section-header-primary',
-				'default'   => $white_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.primary-menu a',
-						'property' => 'color'
-					]
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-menu-hover',
-				'label'     => __( 'Hover Menu color', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-header-primary',
-				'default'   => $breadcrumb_hover,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.site-header-container .main-navigation .primary-menu a:hover',
-						'property' => 'color'
-					]
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-active-menu',
-				'section'   => 'section-header-primary',
-				'label'     => __( 'Active Menu Color', CODEMANAS_THEME_DOMAIN ),
-				'default'   => $breadcrumb_hover,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.primary-menu li.current-menu-item a, .primary-menu li.current-menu-ancestor a',
-						'property' => 'color'
-					]
-				],
-			),
-			array(
-				'category' => 'field',
-				'type'     => 'custom',
-				'settings' => 'field-horizontal-line-container-12312',
-				'section'  => 'section-header-primary',
-				'default'  => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Sub-Menu Colors', CODEMANAS_THEME_DOMAIN ) . '</span>',
-				'priority' => 10,
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-sub-menu',
-				'label'     => __( 'Sub-Menu Background color', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-header-primary',
-				'default'   => '#222222',
-				'choices'   => [
-					'alpha' => true,
-				],
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.site-header-container .main-navigation .primary-menu li ul.sub-menu',
-						'property' => 'background-color'
-					],
-					[
-						'element'  => '.site-header-container .main-navigation .primary-menu li ul.sub-menu:before',
-						'property' => 'color'
-					]
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-submenu-hover',
-				'label'     => __( 'Sub-Menu Text color', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-header-primary',
-				'default'   => $white_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.site-header-container .main-navigation .primary-menu li ul.sub-menu>li>a',
-						'property' => 'color'
-					]
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-submenu-hover-background',
-				'label'     => __( 'Sub-Menu Hover Background', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-header-primary',
-				'default'   => $white_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.site-header-container .main-navigation .primary-menu li ul.sub-menu>li>a:hover',
-						'property' => 'background'
-					]
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-submenu-hover-text',
-				'label'     => __( 'Sub-Menu Hover Text Color', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-header-primary',
-				'default'   => $black_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.site-header-container .main-navigation .primary-menu li ul.sub-menu>li>a:hover',
-						'property' => 'color'
-					]
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-color-submenu-bordr-color',
-				'label'     => __( 'Sub-Menu Border Color', CODEMANAS_THEME_DOMAIN ),
-				'section'   => 'section-header-primary',
-				'default'   => '#333',
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'  => '.site-header-container .main-navigation .primary-menu li ul.sub-menu>li',
-						'property' => 'border-color'
-					]
-				],
-			),
-
-			array(
-				'category' => 'field',
-				'type'     => 'custom',
-				'settings' => 'field-horizontal-line-container-mobile-menu',
-				'section'  => 'section-header-primary',
-				'default'  => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Mobile Menu & Colors', CODEMANAS_THEME_DOMAIN ) . '</span>',
-				'priority' => 10,
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-mobile-menu-background',
-				'section'   => 'section-header-primary',
-				'label'     => __( 'Background Color', CODEMANAS_THEME_DOMAIN ),
-				'default'   => $white_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'     => '.site-header-container .main-navigation .menu-primary-menu-container, .site-header-container .main-navigation .primary-menu li ul.sub-menu',
-						'property'    => 'background',
-						'media_query' => '@media (max-width: 767px)'
-					]
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-mobile-menu-text-color',
-				'section'   => 'section-header-primary',
-				'label'     => __( 'Link Colors', CODEMANAS_THEME_DOMAIN ),
-				'default'   => $black_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'     => '.site-header-container .main-navigation .menu-primary-menu-container .primary-menu li a, .site-header-container .main-navigation .primary-menu li ul.sub-menu>li>a',
-						'property'    => 'color',
-						'media_query' => '@media (max-width: 767px)',
-					],
-				],
-			),
-			array(
-				'category'  => 'field',
-				'type'      => 'color',
-				'settings'  => 'field-header-mobile-menu-hamburger',
-				'section'   => 'section-header-primary',
-				'label'     => __( 'Hamburger Color', CODEMANAS_THEME_DOMAIN ),
-				'default'   => $white_color,
-				'transport' => 'auto',
-				'output'    => [
-					[
-						'element'     => '.site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon .icon, .site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon .icon:before, .site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon .icon:after',
-						'property'    => 'background-color',
-						'media_query' => '@media (max-width: 767px)'
-					]
-				],
-			),
-
+		
 			//Banner Image
 			array(
 				'category'    => 'field',
