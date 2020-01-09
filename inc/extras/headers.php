@@ -168,14 +168,11 @@ add_action( 'busify_top_banner_image', 'busify_pageshow_title_in_banner' );
  * Show Page title banner in inner pages
  */
 function busify_pageshow_title_in_banner() {
-	$enable_title        = Busify_Theme_Options::get_option( 'field-banner-image-background-page-title' );
 	$breadcrumb_position = Busify_Theme_Options::get_option( 'field-breadcrumb-type' );
-	if ( ! empty( $enable_title ) ) {
-		?>
-        <h1 class="busify-image-banner-title"><?php single_post_title(); ?></h1>
-		<?php
-		if ( ! empty( $breadcrumb_position ) && $breadcrumb_position === "after-header" ) {
-			Busify_Template_Functions::get_breadcrumbs( 'breadcrumb-after-header', 'after-header' );
-		}
+	?>
+    <h1 class="busify-image-banner-title"><?php single_post_title(); ?></h1>
+	<?php
+	if ( ! empty( $breadcrumb_position ) && $breadcrumb_position === "after-header" ) {
+		Busify_Template_Functions::get_breadcrumbs( 'breadcrumb-after-header', 'after-header' );
 	}
 }
