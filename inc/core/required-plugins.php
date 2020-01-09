@@ -16,11 +16,6 @@ function busify_check_if_pro_plugin_exists() {
 	$plugins = array(
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'     => 'Breadcrumb NavXT',
-			'slug'     => 'breadcrumb-navxt',
-			'required' => true,
-		),
-		array(
 			'name'     => 'Elementor Page Builder',
 			'slug'     => 'elementor',
 			'required' => true,

@@ -92,17 +92,6 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 			),
 		);
 
-		$breadrumb_sections = array(
-			array(
-				'name'               => 'section-breadcrumbs',
-				'category'           => 'section',
-				'priority'           => 30,
-				'title'              => __( 'Breadcrumbs', CODEMANAS_THEME_DOMAIN ),
-				'description_hidden' => false,
-				'description'        => __( 'Breadcrumbs are automatically hidden on elementor pages.', CODEMANAS_THEME_DOMAIN )
-			)
-		);
-
 		$blog_sections = array(
 			array(
 				'name'        => 'section-blog-archive',
@@ -159,7 +148,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 			)
 		);
 
-		return array_merge( $configs, $global_sections, $header_sections, $breadrumb_sections, $blog_sections, $sidebar_sections, $footer_sections );
+		return array_merge( $configs, $global_sections, $header_sections, $blog_sections, $sidebar_sections, $footer_sections );
 	}
 }
 

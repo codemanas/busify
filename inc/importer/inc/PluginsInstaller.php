@@ -16,12 +16,6 @@ class PluginsInstaller extends OneClickDemoImport {
 		);
 
 		$required_plugins = array(
-			'breadcrumb-navxt' => array(
-				'init' => 'breadcrumb-navxt/breadcrumb-navxt.php',
-				'name' => 'Breadcrumb NavXT',
-				'slug' => 'breadcrumb-navxt',
-				'link' => 'https://wordpress.org/plugins/breadcrumb-navxt/',
-			),
 			'elementor'        => array(
 				'init' => 'elementor/elementor.php',
 				'name' => 'Elementor Page Builder',
@@ -156,10 +150,6 @@ class PluginsInstaller extends OneClickDemoImport {
 	 */
 	public static function check_required_plugin_installed_activated() {
 		$plugins = apply_filters( 'busify_check_required_activated_plugins', array(
-			'breadcrumb-navxt' => array(
-				'init' => 'breadcrumb-navxt/breadcrumb-navxt.php',
-				'name' => 'Breadcrumb NavXT',
-			),
 			'elementor'        => array(
 				'init' => 'elementor/elementor.php',
 				'name' => 'Elementor Page Builder',

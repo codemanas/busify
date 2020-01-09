@@ -113,7 +113,6 @@ class Busify_Admin_Settings {
                                     <div class="busify-column"><i class="dashicons dashicons-slides"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-blog-post-pagination' ) ); ?>"><?php esc_html_e( 'Pagination Styles', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                 </div>
                                 <div class="busify-row">
-                                    <div class="busify-column"><i class="dashicons dashicons-networking"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-breadcrumb-type' ) ); ?>"><?php esc_html_e( 'Breadcrumb Settings', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                     <div class="busify-column"><i class="dashicons dashicons-excerpt-view"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-sidebar-type' ) ); ?>"><?php esc_html_e( 'Sidebar Settings', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                 </div>
                                 <div class="busify-row">

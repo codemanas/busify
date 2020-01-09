@@ -20,7 +20,6 @@ if ( ! class_exists( 'Busify_Template_Functions' ) ) {
 			add_action( 'busify_footer', [ $this, 'master_footer' ] );
 
 			//Breadcrumbs
-			add_action( 'busify_after_masthead_content', [ $this, 'breadcrumbs_inside_header' ], 10 );
 			add_action( 'busify_after_header', [ $this, 'after_header_contents' ], 10 );
 
 			//Footer
@@ -49,16 +48,6 @@ if ( ! class_exists( 'Busify_Template_Functions' ) ) {
 		}
 
 		/**
-		 * Show Breadcrumbs accordingly
-		 *
-		 * @since 1.0.0
-		 * @author Deepen
-		 */
-		function breadcrumbs_inside_header() {
-			$this->get_breadcrumbs( 'breadcrumb-after-header', 'inside-header' );
-		}
-
-		/**
 		 * Show Breadcrumbs and background image
 		 *
 		 * @since 1.0.0
@@ -71,98 +60,7 @@ if ( ! class_exists( 'Busify_Template_Functions' ) ) {
 				if ( ! is_front_page() ) {
 					get_template_part( 'template-parts/header/top-banner-image' );
 				}
-			} else {
-				$this->get_breadcrumbs( 'breadcrumb-after-header', 'after-header' );
 			}
-		}
-
-		/**
-		 * Get type of breadcrumb and layout
-		 *
-		 * @param $part
-		 * @param string $type
-		 */
-		static function get_breadcrumbs( $part, $type = "after-header" ) {
-			$breacrumbs = self::breadcrumb_conditions();
-			if ( ! empty( $breacrumbs['field-breadcrumb-type'] ) && $breacrumbs['field-breadcrumb-type'] === $type && ! busify_check_elementor_builtwith() ) {
-				get_template_part( 'template-parts/header/' . $part );
-			}
-		}
-
-		/**
-		 * Breadcrumb conditions
-		 * @return mixed
-		 */
-		static function breadcrumb_conditions() {
-			$breacrumbs = array(
-				'field-breadcrumb-type'                => Busify_Theme_Options::get_option( 'field-breadcrumb-type' ),
-				'field-breadcrumb-disable-homepage'    => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-homepage' ),
-				'field-breadcrumb-disable-blog'        => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-blog' ),
-				'field-breadcrumb-disable-single'      => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-single' ),
-				'field-breadcrumb-disable-single-page' => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-single-page' ),
-				'field-breadcrumb-disable-single-post' => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-single-post' ),
-				'field-breadcrumb-disable-archive'     => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-archive' ),
-				'field-breadcrumb-disable-404'         => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-404' ),
-				'field-breadcrumb-disable-search'      => Busify_Theme_Options::get_option( 'field-breadcrumb-disable-search' ),
-			);
-
-			//Disable on homepage
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-homepage'] ) ) {
-				if ( is_front_page() ) {
-					return;
-				}
-			}
-
-			//Disable on Blog Listing page
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-blog'] ) ) {
-				if ( is_home() ) {
-					return;
-				}
-			}
-
-			//Override Setting on all single pages and posts
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-single'] ) ) {
-				if ( is_singular() ) {
-					return;
-				}
-			}
-
-			//Disable on Single pages
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-single-page'] ) ) {
-				if ( is_page() ) {
-					return;
-				}
-			}
-
-			//Disable on Single post
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-single-post'] ) ) {
-				if ( is_single() ) {
-					return;
-				}
-			}
-
-			//Disable on Archive post
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-archive'] ) ) {
-				if ( is_archive() ) {
-					return;
-				}
-			}
-
-			//Disable on Archive post
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-404'] ) ) {
-				if ( is_404() ) {
-					return;
-				}
-			}
-
-			//Disable on Search page
-			if ( ! empty( $breacrumbs['field-breadcrumb-disable-search'] ) ) {
-				if ( is_search() ) {
-					return;
-				}
-			}
-
-			return $breacrumbs;
 		}
 
 		/**

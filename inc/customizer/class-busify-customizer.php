@@ -152,21 +152,6 @@ class Busify_Customizer {
         </style>
 		<?php
 	}
-
-	/**
-	 * Save on customizer save
-	 *
-	 * @param $wp_customizer
-	 */
-	/*function on_customizer_save( $wp_customizer ) {
-		$bc_options = get_option( 'bcn_options' );
-		if ( ! empty( $bc_options ) ) {
-			$seperator                = Busify_Theme_Options::get_option( 'field-breadcrumb-seperator' );
-			$bc_options['hseparator'] = '<span class="seperator">' . $seperator . '</span>';
-			update_option( 'bcn_options', $bc_options );
-		}
-	}*/
-
 }
 
 Busify_Customizer::get_instance();

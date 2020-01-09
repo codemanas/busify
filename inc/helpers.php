@@ -31,14 +31,6 @@ if ( ! function_exists( 'busify_check_elementor_builtwith' ) ) {
 	}
 }
 
-if ( ! function_exists( 'is_navxt_breadcrumbs_enabled' ) ) {
-	function is_navxt_breadcrumbs_enabled() {
-		$active_plugins = (array) get_option( 'active_plugins', array() );
-
-		return in_array( 'breadcrumb-navxt/breadcrumb-navxt.php', $active_plugins ) || array_key_exists( 'breadcrumb-navxt/breadcrumb-navxt.php', $active_plugins );
-	}
-}
-
 add_filter( 'body_class', 'busify_elementor_classes' );
 function busify_elementor_classes( $body ) {
 	$check = busify_check_elementor_builtwith();
@@ -57,24 +49,6 @@ if ( ! function_exists( 'busify_dump' ) ) {
 		echo "<pre>";
 		var_dump( $str );
 		echo "</pre>";
-	}
-}
-
-/**
- * Breadcrumbs apply
- */
-if ( ! function_exists( 'busify_breacrumbs' ) ) {
-	function busify_breacrumbs() {
-		if ( function_exists( 'bcn_display' ) ) {
-			$breadcrumb = Busify_Theme_Options::get_option( 'field-breadcrumb-type' );
-			if ( ! empty( $breadcrumb ) && $breadcrumb !== "none" ) {
-				?>
-                <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-					<?php bcn_display(); ?>
-                </div>
-				<?php
-			}
-		}
 	}
 }
 
@@ -107,21 +81,4 @@ if ( ! function_exists( 'busify_search_results' ) ) {
 
 		return true;
 	}
-}
-
-add_filter( 'bcn_settings_init', 'busify_breadcrumb_trail' );
-/**
- * Change Breadcrum seperator to theme
- *
- * @param $trail
- *
- * @return mixed
- */
-function busify_breadcrumb_trail( $trail ) {
-	$seperator = Busify_Theme_Options::get_option( 'field-breadcrumb-seperator' );
-	if ( ! empty( $seperator ) ) {
-		$trail['hseparator'] = '<span class="seperator">' . $seperator . '</span>';
-	}
-
-	return $trail;
 }

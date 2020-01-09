@@ -45,7 +45,6 @@ if ( ! function_exists( 'busify_elementor_active' ) ) {
 require_once CODEMANAS_THEME_DIR . 'inc/customizer/class-busify-customizer.php';
 
 //Render Elements
-require_once CODEMANAS_THEME_DIR . 'inc/shortcodes.php';
 require_once CODEMANAS_THEME_DIR . 'inc/extras/headers.php';
 require_once CODEMANAS_THEME_DIR . 'inc/extras/menus.php';
 require_once CODEMANAS_THEME_DIR . 'inc/extras/posts-pages-sidebars.php';
