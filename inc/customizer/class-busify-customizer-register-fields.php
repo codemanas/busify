@@ -111,65 +111,6 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'section'  => 'title_tagline',
 				'default'  => true,
 			),
-			array(
-				'category'        => 'field',
-				'type'            => 'typography',
-				'settings'        => 'field-identity-site-title-typography',
-				'transport'       => 'auto',
-				'label'           => esc_html__( 'Site Title Typography', CODEMANAS_THEME_DOMAIN ),
-				'section'         => 'title_tagline',
-				'default'         => array(
-					'font-size'      => '24px',
-					'letter-spacing' => '0px',
-					'text-transform' => 'none',
-					'font-family'    => 'Ubuntu',
-					'variant'        => '300',
-					'color'          => $white_color,
-				),
-				'active_callback' => array(
-					array(
-						'setting'  => 'field-identity-display-site-title',
-						'operator' => '===',
-						'value'    => true,
-					),
-				),
-				'output'          => [
-					[
-						'element' => '.site-title',
-					],
-					[
-						'element' => '.site-title a',
-					],
-				],
-			),
-			array(
-				'category'        => 'field',
-				'type'            => 'typography',
-				'settings'        => 'field-identity-site-tagline',
-				'transport'       => 'auto',
-				'label'           => esc_html__( 'Site Tagline Typography', CODEMANAS_THEME_DOMAIN ),
-				'section'         => 'title_tagline',
-				'default'         => array(
-					'font-size'      => '16px',
-					'letter-spacing' => '0px',
-					'text-transform' => 'none',
-					'font-family'    => 'Ubuntu',
-					'variant'        => '300',
-					'color'          => $white_color,
-				),
-				'active_callback' => array(
-					array(
-						'setting'  => 'field-identity-display-site-tagline',
-						'operator' => '===',
-						'value'    => true,
-					),
-				),
-				'output'          => [
-					[
-						'element' => '.site-tagline',
-					],
-				],
-			),
 
 			array(
 				'category' => 'field',
