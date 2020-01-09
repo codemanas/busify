@@ -85,10 +85,6 @@ class Busify_Theme_Options {
 			'field-footer-bar-enable-scrollup-color'          => '#000000',
 			'field-footer-bar-background-color'               => '#ffffff',
 			'field-global-container-width'                    => 1140,
-			'field-global-layout-selection'                   => 'boxed',
-			'field-global-page-layout-selection'              => 'boxed',
-			'fieldglobal-blog-layout-selection'               => 'boxed',
-			'field-global-archives-layout-selection'          => 'boxed',
 			'field-global-typography-body'                    => array(
 				'font-size'      => '16px',
 				'line-height'    => '1.8',

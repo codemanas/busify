@@ -55,62 +55,6 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'default'  => '<hr>',
 				'priority' => 2,
 			),
-			array(
-				'category' => 'field',
-				'type'     => 'select',
-				'settings' => 'field-global-layout-selection',
-				'label'    => esc_html__( 'Layout', CODEMANAS_THEME_DOMAIN ),
-				'section'  => 'section-global-container-layout',
-				'default'  => 'boxed',
-				'priority' => 3,
-				'multiple' => 1,
-				'choices'  => [
-					'boxed'      => esc_html__( 'Boxed', CODEMANAS_THEME_DOMAIN ),
-					'full-width' => esc_html__( 'Full width', CODEMANAS_THEME_DOMAIN ),
-				]
-			),
-			array(
-				'category' => 'field',
-				'type'     => 'select',
-				'settings' => 'field-global-page-layout-selection',
-				'label'    => esc_html__( 'Page Layout', CODEMANAS_THEME_DOMAIN ),
-				'section'  => 'section-global-container-layout',
-				'default'  => 'boxed',
-				'priority' => 4,
-				'multiple' => 1,
-				'choices'  => [
-					'boxed'      => esc_html__( 'Boxed', CODEMANAS_THEME_DOMAIN ),
-					'full-width' => esc_html__( 'Full width', CODEMANAS_THEME_DOMAIN ),
-				],
-			),
-			array(
-				'category' => 'field',
-				'type'     => 'select',
-				'settings' => 'fieldglobal-blog-layout-selection',
-				'label'    => esc_html__( 'Blog Layout', CODEMANAS_THEME_DOMAIN ),
-				'section'  => 'section-global-container-layout',
-				'default'  => 'boxed',
-				'priority' => 5,
-				'multiple' => 1,
-				'choices'  => [
-					'boxed'      => esc_html__( 'Boxed', CODEMANAS_THEME_DOMAIN ),
-					'full-width' => esc_html__( 'Full width', CODEMANAS_THEME_DOMAIN ),
-				],
-			),
-			array(
-				'category' => 'field',
-				'type'     => 'select',
-				'settings' => 'field-global-archives-layout-selection',
-				'label'    => esc_html__( 'Archive Layout', CODEMANAS_THEME_DOMAIN ),
-				'section'  => 'section-global-container-layout',
-				'default'  => 'boxed',
-				'priority' => 6,
-				'multiple' => 1,
-				'choices'  => [
-					'boxed'      => esc_html__( 'Boxed', CODEMANAS_THEME_DOMAIN ),
-					'full-width' => esc_html__( 'Full width', CODEMANAS_THEME_DOMAIN ),
-				],
-			),
 
 			//Typography
 			array(
