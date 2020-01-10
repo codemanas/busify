@@ -159,10 +159,6 @@ class PluginsInstaller extends OneClickDemoImport {
 				'init' => 'wpforms-lite/wpforms.php',
 				'name' => 'Contact Form by WPForms',
 			),
-			'busify-elementor' => array(
-				'init' => 'busify-elementor/busify-elementor.php',
-				'name' => 'Busify Elementor Widgets Bundle',
-			)
 		) );
 
 		$exists = true;

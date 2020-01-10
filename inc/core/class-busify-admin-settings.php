@@ -128,28 +128,6 @@ class Busify_Admin_Settings {
                                     </div>
                                 </div>
 							<?php } ?>
-                            <div class="busify-theme-border-palete-without-padding busify-theme-heading-box-style">
-                                <h3><i class="dashicons dashicons-admin-plugins"></i> <?php esc_html_e( 'Extra Plugins', CODEMANAS_THEME_DOMAIN ); ?></h3>
-                                <div class="busify-theme-extra-plugins">
-                                    <ul>
-                                        <li>
-                                            <span class="busify-theme-extra-plugins-left"><?php esc_html_e( 'Reset Customizer Settings to Defaults', CODEMANAS_THEME_DOMAIN ); ?></span>
-											<?php
-											$installed = OCDI\PluginsInstaller::check_plugin_installed( 'codemanas-reset-customizer/codemanas-reset-customizer.php' );
-											if ( $installed ) {
-												?>
-                                                <span class="busify-theme-extra-plugins-right"><a href="javascript:void(0);" class="button button-primary"><?php esc_html_e( 'Installed', CODEMANAS_THEME_DOMAIN ); ?></a></span>
-												<?php
-											} else {
-												?>
-                                                <span class="busify-theme-extra-plugins-right"><a href="<?php echo admin_url( 'admin.php?page=tgmpa-install-plugins' ); ?>" class="button button-primary"><?php esc_html_e( 'Install and Activate', CODEMANAS_THEME_DOMAIN ); ?></a></span>
-												<?php
-											}
-											?>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                         <div class="busify-theme-wrap-right">
                             <div class="busify-theme-border-palete-without-padding busify-theme-heading-box-style ">

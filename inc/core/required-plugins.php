@@ -25,22 +25,6 @@ function busify_check_if_pro_plugin_exists() {
 			'slug'     => 'wpforms-lite',
 			'required' => true,
 		),
-		array(
-			'name'     => 'Codemanas Reset Customizer',
-			'slug'     => 'codemanas-reset-customizer',
-			'source'   => 'https://github.com/codemanas/codemanas-reset-customizer/archive/master.zip',
-			'required' => false,
-			'version'  => '1.0.0'
-		),
-		array(
-			'name'               => 'Busify Elementor Bundle',
-			'slug'               => 'busify-elementor',
-			'source'             => 'busify-elementor.zip',
-			'required'           => true,
-			'version'            => '1.0.0',
-			'force_activation'   => false,
-			'force_deactivation' => false,
-		),
 	);
 
 	foreach ( $plugins as $key => $plugin ) {
