@@ -16,16 +16,12 @@ class Busify_Admin_Settings {
 	public static $menu_title = 'Busify Theme';
 	public static $page_title = 'Busify';
 	public static $slug = 'busify-theme';
-	public static $theme_updates_slug = 'busify-multi-purpose-responsive-theme';
 	public static $menu_position_screen = 'themes.php';
-	public $license_key;
 
 	/**
 	 * Constructor
 	 */
 	function __construct() {
-
-		$this->license_key = get_option( self::$theme_updates_slug . '_license_key' );
 
 		if ( ! is_admin() ) {
 			return;
@@ -39,7 +35,7 @@ class Busify_Admin_Settings {
 	 */
 	public function init_settings() {
 
-		if ( isset( $_REQUEST['page'] ) && ( strpos( $_REQUEST['page'], self::$slug ) !== false || self::$theme_updates_slug . '-license' === $_REQUEST['page'] ) ) {
+		if ( isset( $_REQUEST['page'] ) && ( strpos( $_REQUEST['page'], self::$slug ) !== false ) ) {
 			add_action( 'admin_enqueue_scripts', [ $this, 'styles_scripts' ] );
 		}
 
@@ -56,9 +52,7 @@ class Busify_Admin_Settings {
 		$slug       = self::$slug;
 
 		add_menu_page( $page_title, $page_title, $capability, $slug, array( $this, 'render_menu' ), 'dashicons-smiley', 2 );
-		if ( ! empty( $this->license_key ) ) {
-			add_submenu_page( 'busify-theme', 'Theme Customizer', 'Theme Customizer', 'manage_options', 'customize.php' );
-		}
+		add_submenu_page( 'busify-theme', 'Theme Customizer', 'Theme Customizer', 'manage_options', 'customize.php' );
 	}
 
 	/**
@@ -69,11 +63,7 @@ class Busify_Admin_Settings {
 	 * @return array
 	 */
 	public function importer_page( $importer ) {
-		if ( ! empty( $this->license_key ) ) {
-			$importer['parent_slug'] = self::$slug;
-		} else {
-			$importer['parent_slug'] = false;
-		}
+		$importer['parent_slug'] = self::$slug;
 
 		return $importer;
 	}
@@ -119,15 +109,13 @@ class Busify_Admin_Settings {
                                     <div class="busify-column"><i class="dashicons dashicons-admin-appearance"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-footer-bar-enable' ) ); ?>"><?php esc_html_e( 'Last Footer Bar', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                 </div>
                             </div>
-							<?php if ( ! empty( $this->license_key ) ) { ?>
-                                <div class="busify-theme-border-palete-without-padding busify-theme-heading-box-style">
-                                    <h3><i class="dashicons dashicons-admin-network"></i> <?php esc_html_e( 'Get Started by Importing Demo Contents', CODEMANAS_THEME_DOMAIN ); ?></h3>
-                                    <div class="busify-theme-knowledge-base">
-                                        <p><?php esc_html_e( 'Import existing contents and design to get started with just one click.', CODEMANAS_THEME_DOMAIN ); ?></p>
-                                        <p><a href="<?php echo admin_url( 'admin.php?page=pt-one-click-demo-import' ); ?>"><?php esc_html_e( 'Take me to demo import page', CODEMANAS_THEME_DOMAIN ); ?> »</a></p>
-                                    </div>
+                            <div class="busify-theme-border-palete-without-padding busify-theme-heading-box-style">
+                                <h3><i class="dashicons dashicons-admin-network"></i> <?php esc_html_e( 'Get Started by Importing Demo Contents', CODEMANAS_THEME_DOMAIN ); ?></h3>
+                                <div class="busify-theme-knowledge-base">
+                                    <p><?php esc_html_e( 'Import existing contents and design to get started with just one click.', CODEMANAS_THEME_DOMAIN ); ?></p>
+                                    <p><a href="<?php echo admin_url( 'admin.php?page=pt-one-click-demo-import' ); ?>"><?php esc_html_e( 'Take me to demo import page', CODEMANAS_THEME_DOMAIN ); ?> »</a></p>
                                 </div>
-							<?php } ?>
+                            </div>
                         </div>
                         <div class="busify-theme-wrap-right">
                             <div class="busify-theme-border-palete-without-padding busify-theme-heading-box-style ">

@@ -27,14 +27,6 @@ function busify_check_if_pro_plugin_exists() {
 		),
 	);
 
-	foreach ( $plugins as $key => $plugin ) {
-		//Check if PRO version exists
-		$pro_version = OCDI\PluginsInstaller::pro_plugin_exist_by_slug( $plugin['slug'] );
-		if ( $pro_version ) {
-			unset( $plugins[ $key ] );
-		}
-	}
-
 	return $plugins;
 }
 

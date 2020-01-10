@@ -53,6 +53,6 @@ require_once CODEMANAS_THEME_DIR . 'inc/extras/paginations.php';
 
 //Custom Importer
 if ( ! class_exists( 'OCDI_Plugin' ) ) {
-	require_once CODEMANAS_THEME_DIR . 'inc/importer/one-click-demo-import.php';
+	// require_once CODEMANAS_THEME_DIR . 'inc/importer/one-click-demo-import.php';
 }
 require_once CODEMANAS_THEME_DIR . 'inc/core/required-plugins.php';
