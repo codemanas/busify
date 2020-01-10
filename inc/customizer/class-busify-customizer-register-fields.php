@@ -680,36 +680,6 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 					]
 				],
 			),
-
-			// Add footer copyright typography option
-			array(
-				'category'        => 'field',
-				'type'            => 'typography',
-				'settings'        => 'field-footer-bar-copyright-text-typo',
-				'transport'       => 'auto',
-				'section'         => 'section-footer-bar',
-				'default'         => array(
-					'color'          => $black_color,
-					'font-size'      => '16px',
-					'line-height'    => '1.5',
-					'letter-spacing' => '0px',
-					'text-transform' => 'none',
-					'variant'        => '300',
-					'text-align'     => 'left'
-				),
-				'active_callback' => [
-					[
-						'setting'  => 'field-footer-bar-enable',
-						'operator' => '===',
-						'value'    => true,
-					]
-				],
-				'output'          => [
-					[
-						'element' => '.busify-super-footer p, .busify-super-footer span',
-					]
-				]
-			),
 		);
 
 		return array_merge( $configs, $global_fields, $this->heading_typography(), $header_fields, $blog_fields, $sidebar_fields, $footer_fields );
