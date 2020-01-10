@@ -116,7 +116,6 @@ class Busify_Admin_Settings {
                                     <div class="busify-column"><i class="dashicons dashicons-excerpt-view"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-sidebar-type' ) ); ?>"><?php esc_html_e( 'Sidebar Settings', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                 </div>
                                 <div class="busify-row">
-                                    <div class="busify-column"><i class="dashicons dashicons-admin-generic"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-footer-widget-layout' ) ); ?>"><?php esc_html_e( 'Footer Widgets', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                     <div class="busify-column"><i class="dashicons dashicons-admin-appearance"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-footer-bar-enable' ) ); ?>"><?php esc_html_e( 'Last Footer Bar', CODEMANAS_THEME_DOMAIN ); ?></a></div>
                                 </div>
                             </div>

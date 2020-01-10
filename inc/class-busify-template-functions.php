@@ -67,11 +67,6 @@ if ( ! class_exists( 'Busify_Template_Functions' ) ) {
 		 * Main footer render
 		 */
 		function main_footer() {
-			$layout = Busify_Theme_Options::get_option( 'field-footer-widget-layout' );
-			if ( ! empty( $layout ) && $layout === "no-widget" ) {
-				return;
-			}
-
 			get_template_part( 'template-parts/footer/footer-main' );
 		}
 

@@ -45,9 +45,6 @@ function get_busify_sidebar_layout() {
 		//Global Sidebar
 		$sidebar_layout = array(
 			'field-sidebar-type'    => Busify_Theme_Options::get_option( 'field-sidebar-type' ),
-			'field-sidebar-post'    => Busify_Theme_Options::get_option( 'field-sidebar-post' ),
-			'field-sidebar-page'    => Busify_Theme_Options::get_option( 'field-sidebar-page' ),
-			'field-sidebar-archive' => Busify_Theme_Options::get_option( 'field-sidebar-archive' ),
 		);
 
 		//Post Sidebar
@@ -56,24 +53,7 @@ function get_busify_sidebar_layout() {
 		$sidebar = $global_sidebar;
 
 		if ( $global_sidebar !== "none" ) {
-			//Post Sidebar
-			$post_sidebar = ! empty( $sidebar_layout['field-sidebar-post'] ) ? $sidebar_layout['field-sidebar-post'] : false;
-
-			//Pages Sidebar
-			$pages_sidebar = ! empty( $sidebar_layout['field-sidebar-page'] ) ? $sidebar_layout['field-sidebar-page'] : false;
-
-			//Archives Sidebar
-			$archive_sidebar = ! empty( $sidebar_layout['field-sidebar-archive'] ) ? $sidebar_layout['field-sidebar-archive'] : false;
-
-			if ( ( is_home() || is_single() ) && $post_sidebar ) {
-				$sidebar = get_busify_sidebar_style( $post_sidebar );
-			} else if ( is_page() ) {
-				$sidebar = get_busify_sidebar_style( $pages_sidebar );
-			} else if ( is_archive() || is_search() ) {
-				$sidebar = get_busify_sidebar_style( $archive_sidebar );
-			} else {
-				$sidebar = get_busify_sidebar_style( $sidebar );
-			}
+			$sidebar = get_busify_sidebar_style( $sidebar );
 		}
 
 		return apply_filters( 'busify_sidebar_layout', $sidebar, $sidebar_layout );
