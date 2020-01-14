@@ -50,10 +50,11 @@ class Busify_Admin_Settings {
 	 */
 	public function show_admin_menu() {
 		$page_title = self::$page_title;
+		$menu_title = self::$menu_title;
 		$capability = 'manage_options';
 		$slug       = self::$slug;
 
-		add_theme_page( $page_title, $page_title, $capability, $slug, array( $this, 'render_menu' ), 'dashicons-smiley', 2 );
+		add_theme_page( $page_title, $menu_title, $capability, $slug, array( $this, 'render_menu' ), 2 );
 	}
 
 	/**

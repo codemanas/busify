@@ -99,7 +99,7 @@ function busify_header_logo_attr( $image, $attachment_id, $size, $icon ) {
  * @return mixed
  */
 function busify_transparent_header( $data = array() ) {
-	$data[] = 'busify-no-transparent';
+	$data[] = 'busify-header-transparent';
 
 	$result = apply_filters( 'busify_masthead_main_class', $data );
 	if ( ! empty( $result ) ) {
