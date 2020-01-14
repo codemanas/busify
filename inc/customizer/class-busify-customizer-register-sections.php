@@ -21,7 +21,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'     => 'section-global-container-layout',
 				'category' => 'section',
 				'priority' => 1,
-				'title'    => esc_html__( 'Container', CODEMANAS_THEME_DOMAIN ),
+				'title'    => esc_html__( 'Container', 'busify' ),
 				'panel'    => 'panel-global'
 			),
 
@@ -30,7 +30,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'     => 'section-global-typography',
 				'category' => 'section',
 				'priority' => 2,
-				'title'    => esc_html__( 'Typography', CODEMANAS_THEME_DOMAIN ),
+				'title'    => esc_html__( 'Typography', 'busify' ),
 				'panel'    => 'panel-global'
 			),
 
@@ -39,7 +39,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'     => 'section-global-buttons',
 				'category' => 'section',
 				'priority' => 4,
-				'title'    => esc_html__( 'Buttons', CODEMANAS_THEME_DOMAIN ),
+				'title'    => esc_html__( 'Buttons', 'busify' ),
 				'panel'    => 'panel-global'
 			),
 		);
@@ -50,7 +50,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'               => 'title_tagline',
 				'category'           => 'section',
 				'priority'           => 2,
-				'title'              => __( 'Site Identity', CODEMANAS_THEME_DOMAIN ),
+				'title'              => __( 'Site Identity', 'busify' ),
 				'panel'              => 'panel-header',
 				'description_hidden' => true,
 			),
@@ -60,7 +60,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'     => 'section-header-primary',
 				'category' => 'section',
 				'priority' => 2,
-				'title'    => esc_html__( 'Primary Header & Menus', CODEMANAS_THEME_DOMAIN ),
+				'title'    => esc_html__( 'Primary Header & Menus', 'busify' ),
 				'panel'    => 'panel-header'
 			),
 
@@ -69,7 +69,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'     => 'section-header-transparent-header',
 				'category' => 'section',
 				'priority' => 4,
-				'title'    => esc_html__( 'Transparent Header', CODEMANAS_THEME_DOMAIN ),
+				'title'    => esc_html__( 'Transparent Header', 'busify' ),
 				'panel'    => 'panel-header'
 			),
 
@@ -78,7 +78,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'     => 'section-header-sticky',
 				'category' => 'section',
 				'priority' => 5,
-				'title'    => esc_html__( 'Sticky Header', CODEMANAS_THEME_DOMAIN ),
+				'title'    => esc_html__( 'Sticky Header', 'busify' ),
 				'panel'    => 'panel-header'
 			),
 
@@ -87,7 +87,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'     => 'section-header-banner-image',
 				'category' => 'section',
 				'priority' => 6,
-				'title'    => esc_html__( 'Inner Banner Image', CODEMANAS_THEME_DOMAIN ),
+				'title'    => esc_html__( 'Inner Banner Image', 'busify' ),
 				'panel'    => 'panel-header'
 			),
 		);
@@ -98,23 +98,23 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'category'    => 'section',
 				'priority'    => 40,
 				'panel'       => 'panel-blog',
-				'description' => esc_html__( 'Note: This option will effect archive/blog listing page.', CODEMANAS_THEME_DOMAIN ),
-				'title'       => __( 'Blog/Archive Page', CODEMANAS_THEME_DOMAIN ),
+				'description' => esc_html__( 'Note: This option will effect archive/blog listing page.', 'busify' ),
+				'title'       => __( 'Blog/Archive Page', 'busify' ),
 			),
 			array(
 				'name'        => 'section-single-post',
 				'category'    => 'section',
 				'priority'    => 45,
 				'panel'       => 'panel-blog',
-				'description' => esc_html__( 'Note: This option will effect only in single posts.', CODEMANAS_THEME_DOMAIN ),
-				'title'       => __( 'Single Posts', CODEMANAS_THEME_DOMAIN ),
+				'description' => esc_html__( 'Note: This option will effect only in single posts.', 'busify' ),
+				'title'       => __( 'Single Posts', 'busify' ),
 			),
 			array(
 				'name'     => 'section-blog-pagination',
 				'category' => 'section',
 				'priority' => 46,
 				'panel'    => 'panel-blog',
-				'title'    => __( 'Pagination', CODEMANAS_THEME_DOMAIN ),
+				'title'    => __( 'Pagination', 'busify' ),
 			)
 		);
 
@@ -123,7 +123,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'               => 'section-sidebar',
 				'category'           => 'section',
 				'priority'           => 50,
-				'title'              => __( 'Sidebar', CODEMANAS_THEME_DOMAIN ),
+				'title'              => __( 'Sidebar', 'busify' ),
 				'description_hidden' => true,
 			)
 		);
@@ -134,7 +134,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'               => 'section-footer-widgets',
 				'category'           => 'section',
 				'priority'           => 50,
-				'title'              => __( 'Footer Widgets', CODEMANAS_THEME_DOMAIN ),
+				'title'              => __( 'Footer Widgets', 'busify' ),
 				'description_hidden' => true,
 				'panel'              => 'panel-footer'
 			),
@@ -142,7 +142,7 @@ class Busify_Customizer_Register_Sections extends Busify_Customizer_Conifg_Base 
 				'name'               => 'section-footer-bar',
 				'category'           => 'section',
 				'priority'           => 55,
-				'title'              => __( 'Last Footer Bar', CODEMANAS_THEME_DOMAIN ),
+				'title'              => __( 'Last Footer Bar', 'busify' ),
 				'description_hidden' => true,
 				'panel'              => 'panel-footer'
 			)

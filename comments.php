@@ -36,7 +36,7 @@ if ( post_password_required() ) {
 
 			if ( ! comments_open() ) :
 				?>
-                <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'code-manas' ); ?></p>
+                <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'busify' ); ?></p>
 			<?php
 			endif;
 			?>

@@ -28,8 +28,8 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'    => 'field',
 				'type'        => 'slider',
 				'settings'    => 'field-global-container-width',
-				'label'       => esc_html__( 'Width', CODEMANAS_THEME_DOMAIN ),
-				'description' => esc_html__( 'Changing this will change width of content container.', CODEMANAS_THEME_DOMAIN ),
+				'label'       => esc_html__( 'Width', 'busify' ),
+				'description' => esc_html__( 'Changing this will change width of content container.', 'busify' ),
 				'section'     => 'section-global-container-layout',
 				'default'     => 1140,
 				'transport' => 'auto',
@@ -62,7 +62,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'      => 'typography',
 				'settings'  => 'field-global-typography-body',
 				'transport' => 'auto',
-				'label'     => '<span class="customizer-busify-title wp-ui-text-highlight nomargin">' . esc_html__( 'Body Font', CODEMANAS_THEME_DOMAIN ) . '</span>',
+				'label'     => '<span class="customizer-busify-title wp-ui-text-highlight nomargin">' . esc_html__( 'Body Font', 'busify' ) . '</span>',
 				'section'   => 'section-global-typography',
 				'default'   => array(
 					'font-size'      => '16px',
@@ -86,7 +86,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category' => 'field',
 				'type'     => 'slider',
 				'settings' => 'field-identity-logo-width',
-				'label'    => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Site Logo Width & Site Titles', CODEMANAS_THEME_DOMAIN ) . '</span>',
+				'label'    => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Site Logo Width & Site Titles', 'busify' ) . '</span>',
 				'section'  => 'title_tagline',
 				'default'  => 140,
 				'choices'  => [
@@ -99,7 +99,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category' => 'field',
 				'type'     => 'checkbox',
 				'settings' => 'field-identity-display-site-title',
-				'label'    => esc_html__( 'Display Site Title', CODEMANAS_THEME_DOMAIN ),
+				'label'    => esc_html__( 'Display Site Title', 'busify' ),
 				'section'  => 'title_tagline',
 				'default'  => true,
 			),
@@ -107,7 +107,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category' => 'field',
 				'type'     => 'checkbox',
 				'settings' => 'field-identity-display-site-tagline',
-				'label'    => esc_html__( 'Display Site Tagline', CODEMANAS_THEME_DOMAIN ),
+				'label'    => esc_html__( 'Display Site Tagline', 'busify' ),
 				'section'  => 'title_tagline',
 				'default'  => true,
 			),
@@ -117,7 +117,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'     => 'custom',
 				'settings' => 'field-horizontal-line-container-favicon',
 				'section'  => 'title_tagline',
-				'default'  => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Site Favicon', CODEMANAS_THEME_DOMAIN ) . '</span>',
+				'default'  => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Site Favicon', 'busify' ) . '</span>',
 			),
 
 			//Sticky Header
@@ -125,8 +125,8 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'    => 'field',
 				'type'        => 'toggle',
 				'settings'    => 'field-header-menu-sticky',
-				'label'       => __( 'Enable Sticky Header ?', CODEMANAS_THEME_DOMAIN ),
-				'description' => esc_html__( 'Enabling it will make the header stick to the top.', CODEMANAS_THEME_DOMAIN ),
+				'label'       => __( 'Enable Sticky Header ?', 'busify' ),
+				'description' => esc_html__( 'Enabling it will make the header stick to the top.', 'busify' ),
 				'section'     => 'section-header-sticky',
 				'default'     => true,
 			),
@@ -134,7 +134,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'toggle',
 				'settings'        => 'field-header-menu-sticky-mobile-disable',
-				'label'           => __( 'Disable on Mobile ?', CODEMANAS_THEME_DOMAIN ),
+				'label'           => __( 'Disable on Mobile ?', 'busify' ),
 				'section'         => 'section-header-sticky',
 				'default'         => true,
 				'active_callback' => array(
@@ -149,7 +149,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'color',
 				'settings'        => 'field-header-menu-sticky-background',
-				'label'           => __( 'Sticky Background color', CODEMANAS_THEME_DOMAIN ),
+				'label'           => __( 'Sticky Background color', 'busify' ),
 				'section'         => 'section-header-sticky',
 				'default'         => 'rgba(10,10,10,0.75)',
 				'choices'         => [
@@ -176,13 +176,13 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'            => 'custom',
 				'settings'        => 'field-horizontal-line-container-3',
 				'section'         => 'section-header-primary',
-				'default'         => '<span class="customizer-busify-title wp-ui-text-highlight nomargin">' . __( 'Menu Section', CODEMANAS_THEME_DOMAIN ) . '</span>',
+				'default'         => '<span class="customizer-busify-title wp-ui-text-highlight nomargin">' . __( 'Menu Section', 'busify' ) . '</span>',
 			),
 			array(
 				'category'        => 'field',
 				'type'            => 'checkbox',
 				'settings'        => 'field-header-menu-disable-search',
-				'label'           => esc_html__( 'Disable Search', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Disable Search', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => false,
 			),
@@ -191,7 +191,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'            => 'select',
 				'settings'        => 'field-header-menu-last-item',
 				'transport'       => 'auto',
-				'label'           => esc_html__( 'Last item in menu', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Last item in menu', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => 'none',
 				'choices'         => $this->lastMenuItems(),
@@ -200,9 +200,9 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'text',
 				'settings'        => 'field-header-menu-last-item-button-texxt',
-				'label'           => esc_html__( 'Button Text', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Button Text', 'busify' ),
 				'section'         => 'section-header-primary',
-				'default'         => 'Get a Quote',
+				'default'         => esc_html( 'Get a Quote', 'busify' ),
 				'active_callback' => array(
 					array(
 						'setting'  => 'field-header-menu-last-item',
@@ -215,9 +215,9 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'link',
 				'settings'        => 'field-header-menu-last-item-btn-link',
-				'label'           => esc_html__( 'Button Link', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Button Link', 'busify' ),
 				'section'         => 'section-header-primary',
-				'default'         => 'https://www.codemanas.com/',
+				'default'         => esc_url( 'https://www.codemanas.com/' ),
 				'active_callback' => array(
 					array(
 						'setting'  => 'field-header-menu-last-item',
@@ -230,7 +230,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'color',
 				'settings'        => 'field-header-menu-last-item-btn-color',
-				'label'           => __( 'Button Background Color', CODEMANAS_THEME_DOMAIN ),
+				'label'           => __( 'Button Background Color', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => $primary_color,
 				'active_callback' => array(
@@ -252,7 +252,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'color',
 				'settings'        => 'field-header-menu-last-item-btn-text-color',
-				'label'           => __( 'Button Text Color', CODEMANAS_THEME_DOMAIN ),
+				'label'           => __( 'Button Text Color', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => $white_color,
 				'active_callback' => array(
@@ -275,7 +275,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'slider',
 				'settings'        => 'field-header-menu-last-item-btn-vertical',
-				'label'           => __( 'Vertical Padding', CODEMANAS_THEME_DOMAIN ),
+				'label'           => __( 'Vertical Padding', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => 10,
 				'choices'         => [
@@ -308,7 +308,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'slider',
 				'settings'        => 'field-header-menu-last-item-btn-horizontal',
-				'label'           => __( 'Horizontal Padding', CODEMANAS_THEME_DOMAIN ),
+				'label'           => __( 'Horizontal Padding', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => 20,
 				'choices'         => [
@@ -341,7 +341,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'slider',
 				'settings'        => 'field-header-menu-last-item-btn-border',
-				'label'           => esc_html__( 'Border Width', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Border Width', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => 0,
 				'choices'         => [
@@ -369,7 +369,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'color',
 				'settings'        => 'field-header-menu-last-item-btn-border-color',
-				'label'           => __( 'Button Border Color', CODEMANAS_THEME_DOMAIN ),
+				'label'           => __( 'Button Border Color', 'busify' ),
 				'section'         => 'section-header-primary',
 				'default'         => $black_color,
 				'active_callback' => array(
@@ -391,9 +391,9 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'textarea',
 				'settings'        => 'field-header-menu-last-item-btn-custom-text',
-				'label'           => esc_html__( 'Custom Text/HTML', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Custom Text/HTML', 'busify' ),
 				'section'         => 'section-header-primary',
-				'default'         => '<button>Register</button>',
+				'default'         => '<button>' . __( 'Register', 'busify' ) . '</button>',
 				'active_callback' => array(
 					array(
 						'setting'  => 'field-header-menu-last-item',
@@ -408,18 +408,18 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'    => 'field',
 				'type'        => 'toggle',
 				'settings'    => 'field-banner-image-background-enable',
-				'label'       => esc_html__( 'Enable Banner', CODEMANAS_THEME_DOMAIN ),
+				'label'       => esc_html__( 'Enable Banner', 'busify' ),
 				'section'     => 'section-header-banner-image',
-				'description' => esc_html__( 'Shows a banner image below header for non elementor pages. If transparent header is used. Banner will be behind the header.', CODEMANAS_THEME_DOMAIN ),
+				'description' => esc_html__( 'Shows a banner image below header for non elementor pages. If transparent header is used. Banner will be behind the header.', 'busify' ),
 				'default'     => true,
 			),
 			array(
 				'category'        => 'field',
 				'type'            => 'background',
 				'settings'        => 'field-banner-image-background-control',
-				'label'           => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Background & Overlay', CODEMANAS_THEME_DOMAIN ) . '</span>',
+				'label'           => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Background & Overlay', 'busify' ) . '</span>',
 				'section'         => 'section-header-banner-image',
-				'description'     => esc_html__( 'This is only applied in pages where elementor builder is not used !', CODEMANAS_THEME_DOMAIN ),
+				'description'     => esc_html__( 'This is only applied in pages where elementor builder is not used !', 'busify' ),
 				'default'         => [
 					'background-color'      => $primary_color,
 					'background-image'      => '',
@@ -446,7 +446,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'color',
 				'settings'        => 'field-banner-image-background-overlay',
-				'label'           => esc_html__( 'Background Overlay Color', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Background Overlay Color', 'busify' ),
 				'default'         => 'rgba(0,0,0,0.7)',
 				'choices'         => [
 					'alpha' => true,
@@ -475,7 +475,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category' => 'field',
 				'type'     => 'sortable',
 				'settings' => 'field-blog-page-layout',
-				'label'    => esc_html__( 'Post Structure', CODEMANAS_THEME_DOMAIN ),
+				'label'    => esc_html__( 'Post Structure', 'busify' ),
 				'section'  => 'section-blog-archive',
 				'default'  => [
 					'image',
@@ -484,10 +484,10 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 					'content',
 				],
 				'choices'  => [
-					'title'   => esc_html__( 'Title', CODEMANAS_THEME_DOMAIN ),
-					'meta'    => esc_html__( 'Meta', CODEMANAS_THEME_DOMAIN ),
-					'image'   => esc_html__( 'Featured Image', CODEMANAS_THEME_DOMAIN ),
-					'content' => esc_html__( 'Content', CODEMANAS_THEME_DOMAIN ),
+					'title'   => esc_html__( 'Title', 'busify' ),
+					'meta'    => esc_html__( 'Meta', 'busify' ),
+					'image'   => esc_html__( 'Featured Image', 'busify' ),
+					'content' => esc_html__( 'Content', 'busify' ),
 				],
 			),
 
@@ -497,7 +497,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'     => 'custom',
 				'settings' => 'field-horizontal-line-container-9',
 				'section'  => 'section-blog-pagination',
-				'default'  => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Pagination', CODEMANAS_THEME_DOMAIN ) . '</span>',
+				'default'  => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Pagination', 'busify' ) . '</span>',
 			),
 			array(
 				'category' => 'field',
@@ -506,8 +506,8 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'section'  => 'section-blog-pagination',
 				'default'  => 'load-more',
 				'choices'  => array(
-					'load-more'        => esc_html__( 'Load More Button Pagination', CODEMANAS_THEME_DOMAIN ),
-					'legacy'           => esc_html__( 'Legacy Old/New', CODEMANAS_THEME_DOMAIN ),
+					'load-more'        => esc_html__( 'Load More Button Pagination', 'busify' ),
+					'legacy'           => esc_html__( 'Legacy Old/New', 'busify' ),
 				),
 			),
 
@@ -516,7 +516,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category' => 'field',
 				'type'     => 'sortable',
 				'settings' => 'field-single-post-structure',
-				'label'    => esc_html__( 'Structure', CODEMANAS_THEME_DOMAIN ),
+				'label'    => esc_html__( 'Structure', 'busify' ),
 				'section'  => 'section-single-post',
 				'default'  => [
 					'image',
@@ -525,10 +525,10 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 					'content',
 				],
 				'choices'  => [
-					'image'   => esc_html__( 'Featured Image', CODEMANAS_THEME_DOMAIN ),
-					'title'   => esc_html__( 'Title', CODEMANAS_THEME_DOMAIN ),
-					'meta'    => esc_html__( 'Meta Fields', CODEMANAS_THEME_DOMAIN ),
-					'content' => esc_html__( 'Content', CODEMANAS_THEME_DOMAIN ),
+					'image'   => esc_html__( 'Featured Image', 'busify' ),
+					'title'   => esc_html__( 'Title', 'busify' ),
+					'meta'    => esc_html__( 'Meta Fields', 'busify' ),
+					'content' => esc_html__( 'Content', 'busify' ),
 				],
 				'priority' => 1,
 			),
@@ -539,16 +539,16 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'  => 'field',
 				'type'      => 'select',
 				'settings'  => 'field-sidebar-type',
-				'label'     => esc_html__( 'Default Sidebar', CODEMANAS_THEME_DOMAIN ),
+				'label'     => esc_html__( 'Default Sidebar', 'busify' ),
 				'section'   => 'section-sidebar',
 				'default'   => 'right',
 				'transport' => 'refresh',
 				'priority'  => 1,
 				'multiple'  => 1,
 				'choices'   => [
-					'none'  => esc_html__( 'No Sidebar', CODEMANAS_THEME_DOMAIN ),
-					'left'  => esc_html__( 'Left Sidebar', CODEMANAS_THEME_DOMAIN ),
-					'right' => esc_html__( 'Right Sidebar', CODEMANAS_THEME_DOMAIN ),
+					'none'  => esc_html__( 'No Sidebar', 'busify' ),
+					'left'  => esc_html__( 'Left Sidebar', 'busify' ),
+					'right' => esc_html__( 'Right Sidebar', 'busify' ),
 				],
 			),
 			array(
@@ -574,8 +574,8 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'    => 'field',
 				'type'        => 'toggle',
 				'settings'    => 'field-footer-bar-enable',
-				'label'       => esc_html__( 'Enable Bottom Footer Bar', CODEMANAS_THEME_DOMAIN ),
-				'description' => esc_html__( 'This option toggles the footer bar.', CODEMANAS_THEME_DOMAIN ),
+				'label'       => esc_html__( 'Enable Bottom Footer Bar', 'busify' ),
+				'description' => esc_html__( 'This option toggles the footer bar.', 'busify' ),
 				'section'     => 'section-footer-bar',
 				'default'     => 1,
 			),
@@ -583,10 +583,10 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'textarea',
 				'settings'        => 'field-footer-bar-copyright',
-				'label'           => esc_html__( 'Footer content', CODEMANAS_THEME_DOMAIN ),
-				'description'     => esc_html__( 'HTML allowed', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Footer content', 'busify' ),
+				'description'     => esc_html__( 'HTML allowed', 'busify' ),
 				'section'         => 'section-footer-bar',
-				'default'         => '<p>Copyright © ' . date( 'Y' ) . ' CodeManas. All rights reserved.</p><p>Powered by <strong>WordPress</strong></p>',
+				'default'         => '<p>' . __( 'Copyright &#169; ', 'busify' ) . date( 'Y' ) . __( '. All rights reserved.</p><p>Powered by <strong>WordPress</strong></p>', 'busify' ),
 				'active_callback' => [
 					[
 						'setting'  => 'field-footer-bar-enable',
@@ -600,7 +600,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'color',
 				'settings'        => 'field-footer-bar-background-color',
-				'label'           => esc_html__( 'Background Color', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Background Color', 'busify' ),
 				'section'         => 'section-footer-bar',
 				'default'         => $white_color,
 				'active_callback' => [
@@ -624,8 +624,8 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'category'        => 'field',
 				'type'            => 'toggle',
 				'settings'        => 'field-footer-bar-enable-scrollup',
-				'label'           => esc_html__( 'Enable scroll up', CODEMANAS_THEME_DOMAIN ),
-				'description'     => esc_html__( 'This option toggles the "Scroll to top" arrow.', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Enable scroll up', 'busify' ),
+				'description'     => esc_html__( 'This option toggles the "Scroll to top" arrow.', 'busify' ),
 				'section'         => 'section-footer-bar',
 				'default'         => true,
 				'active_callback' => [
@@ -642,7 +642,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'            => 'color',
 				'settings'        => 'field-footer-bar-enable-scrollup-color',
 				'transport'       => 'auto',
-				'label'           => esc_html__( 'Scroll up color', CODEMANAS_THEME_DOMAIN ),
+				'label'           => esc_html__( 'Scroll up color', 'busify' ),
 				'section'         => 'section-footer-bar',
 				'default'         => $black_color,
 				'active_callback' => [
@@ -671,7 +671,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'            => 'custom',
 				'settings'        => 'field-horizontal-line-container-15',
 				'section'         => 'section-footer-bar',
-				'default'         => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Colors & Typography', CODEMANAS_THEME_DOMAIN ) . '</span>',
+				'default'         => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Colors & Typography', 'busify' ) . '</span>',
 				'active_callback' => [
 					[
 						'setting'  => 'field-footer-bar-enable',
@@ -697,7 +697,7 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 				'type'      => 'typography',
 				'settings'  => 'field-global-typography-headings-' . $h . '-typo',
 				'transport' => 'auto',
-				'label'     => '<span class="customizer-busify-title wp-ui-text-highlight">Heading Font: ' . $h . '</span>',
+				'label'     => '<span class="customizer-busify-title wp-ui-text-highlight">' . __( 'Heading Font: ', 'busify' ) . $h . '</span>',
 				'section'   => 'section-global-typography',
 				'default'   => array(
 					'font-size'      => $size,
@@ -726,9 +726,9 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 	 */
 	public function lastMenuItems() {
 		$items = array(
-			'none'      => __( 'None', CODEMANAS_THEME_DOMAIN ),
-			'button'    => __( 'Button', CODEMANAS_THEME_DOMAIN ),
-			'text/html' => __( 'Text/HTML', CODEMANAS_THEME_DOMAIN )
+			'none'      => __( 'None', 'busify' ),
+			'button'    => __( 'Button', 'busify' ),
+			'text/html' => __( 'Text/HTML', 'busify' )
 		);
 
 		$items = apply_filters( 'busify_customer_last_item_menus', $items );

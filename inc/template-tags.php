@@ -43,13 +43,13 @@ if ( ! function_exists( 'busify_post_category_links' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', CODEMANAS_THEME_DOMAIN ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'busify' ) );
 			if ( $tags_list ) {
 				echo '<span class="cat-tags-links">' . $tags_list . '</span>'; // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', CODEMANAS_THEME_DOMAIN ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'busify' ) );
 			if ( $categories_list ) {
 				echo '<span class="blog-type-category">' . $categories_list . '</span>'; // WPCS: XSS OK.
 			}
@@ -65,11 +65,11 @@ if ( ! function_exists( 'busify_post_leave_comment' ) ) :
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link( sprintf( wp_kses( /* translators: %s: post title */
-				__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', CODEMANAS_THEME_DOMAIN ), array(
+				__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'busify' ), array(
 				'span' => array(
 					'class' => array(),
 				),
-			) ), get_the_title() ) );
+			) ), esc_html( get_the_title() ) ) );
 			echo '</span>';
 		}
 	}
@@ -110,3 +110,13 @@ if ( ! function_exists( 'busify_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+
+/**
+ * Include a skip to content link at the top of the page so that users can bypass the menu.
+ */
+function busify_skip_link() {
+	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'busify' ) . '</a>';
+}
+
+add_action( 'wp_body_open', 'busify_skip_link', 5 );

@@ -29,7 +29,7 @@ if ( ! function_exists( 'busify_get_footer_widgets' ) ) {
 				foreach ( $footer_widgets as $k => $footer_widget ) {
 					if ( is_active_sidebar( $k ) ) {
 						?>
-                        <section class="col-md-3 widget-<?php echo $k; ?> busify-widget-<?php echo $k; ?> widget-section-wrap">
+                        <section class="col-md-3 widget-<?php echo esc_attr( $k ); ?> busify-widget-<?php echo esc_attr( $k ); ?> widget-section-wrap">
 							<?php dynamic_sidebar( $k ); ?>
                         </section>
 						<?php

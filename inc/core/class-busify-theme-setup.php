@@ -12,6 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+if ( ! isset( $content_width ) ) {
+    $content_width = 820;
+}
+
 if ( ! class_exists( 'Busify_Theme_Setup' ) ) {
 
 	class Busify_Theme_Setup {
@@ -51,7 +55,7 @@ if ( ! class_exists( 'Busify_Theme_Setup' ) ) {
 		 */
 		public function setup_theme() {
 
-			load_theme_textdomain( CODEMANAS_THEME_DOMAIN, get_template_directory() . '/languages' );
+			load_theme_textdomain( 'busify', get_template_directory() . '/languages' );
 
 			// Add default posts and comments RSS feed links to head.
 			add_theme_support( 'automatic-feed-links' );
@@ -73,7 +77,7 @@ if ( ! class_exists( 'Busify_Theme_Setup' ) ) {
 
 			// This theme uses wp_nav_menu() in one location.
 			register_nav_menus( array(
-				'primary-menu' => esc_html__( 'Primary', CODEMANAS_THEME_DOMAIN ),
+				'primary-menu' => esc_html__( 'Primary', 'busify' ),
 			) );
 
 			/*
@@ -105,12 +109,6 @@ if ( ! class_exists( 'Busify_Theme_Setup' ) ) {
 
 
 			add_image_size( 'thumbnail-medium', 600, 600, true );
-
-			//Redirect to theme welcome page here
-			global $pagenow;
-			if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
-				wp_redirect( admin_url( "admin.php?page=busify-theme" ) );
-			}
 		}
 	}
 

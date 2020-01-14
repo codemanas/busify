@@ -22,7 +22,7 @@ if ( ! function_exists( 'busify_pagination' ) ) {
 					$current_page = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 					if ( $wp_query->max_num_pages > 1 ) {
 						?>
-                        <button data-filter="<?php echo esc_attr( $filter ); ?>" data-current-page="<?php echo absint( $current_page ); ?>" id="busify-ajax-load-more" class="busify-ajax-load-more"><?php echo esc_html__( 'Load More', CODEMANAS_THEME_DOMAIN ); ?></button>
+                        <button data-filter="<?php echo esc_attr( $filter ); ?>" data-current-page="<?php echo absint( $current_page ); ?>" id="busify-ajax-load-more" class="busify-ajax-load-more"><?php echo esc_html__( 'Load More', 'busify' ); ?></button>
 						<?php
 					}
 					break;

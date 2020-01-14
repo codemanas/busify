@@ -37,6 +37,7 @@ if ( ! class_exists( 'Busify_Enqueue_Scripts' ) ) {
 			$default_assets = array(
 				'js' => array(
 					'busify-js' => 'main',
+					'skip-link-focus-fix-js' => 'skip-link-focus-fix',
 				),
 
 				'css' => array(
@@ -127,18 +128,18 @@ if ( ! class_exists( 'Busify_Enqueue_Scripts' ) ) {
 		function localize_scripts() {
 			$options = array(
 				'sticky_header'       => array(
-					'enable'         => Busify_Theme_Options::get_option( 'field-header-menu-sticky' ),
-					'disable_mobile' => Busify_Theme_Options::get_option( 'field-header-menu-sticky-mobile-disable' )
+					'enable'         => boolval( Busify_Theme_Options::get_option( 'field-header-menu-sticky' ) ),
+					'disable_mobile' => boolval( Busify_Theme_Options::get_option( 'field-header-menu-sticky-mobile-disable' ) )
 				),
 				'menu_settings'       => array(
-					'disable_search' => Busify_Theme_Options::get_option( 'field-header-menu-disable-search' )
+					'disable_search' => boolval( Busify_Theme_Options::get_option( 'field-header-menu-disable-search' ) )
 				),
-				'ajaxurl'             => admin_url( 'admin-ajax.php' ),
-				'ajaxButtonType'      => Busify_Theme_Options::get_option( 'field-blog-post-pagination' ),
+				'ajaxurl'             => esc_url( admin_url( 'admin-ajax.php' ) ),
+				'ajaxButtonType'      => esc_html( Busify_Theme_Options::get_option( 'field-blog-post-pagination' ) ),
 				'ajaxLoadMoreLocales' => array(
-					'loading'   => __( 'Loading...', CODEMANAS_THEME_DOMAIN ),
-					'load_more' => __( 'Load More', CODEMANAS_THEME_DOMAIN ),
-					'error'     => __( 'Error loading the posts.', CODEMANAS_THEME_DOMAIN )
+					'loading'   => __( 'Loading...', 'busify' ),
+					'load_more' => __( 'Load More', 'busify' ),
+					'error'     => __( 'Error loading the posts.', 'busify' )
 				)
 			);
 

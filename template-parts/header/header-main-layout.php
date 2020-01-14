@@ -8,7 +8,7 @@
  */
 ?>
 
-<header id="masthead" class="site-header <?php echo busify_transparent_header(); ?>">
+<header id="masthead" class="site-header <?php echo esc_attr( busify_transparent_header() ); ?>">
 	<?php busify_before_masthead_content(); ?>
     <div class="container">
         <div class="site-header-container">

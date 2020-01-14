@@ -16,14 +16,14 @@ function busify_check_if_pro_plugin_exists() {
 	$plugins = array(
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'     => 'Elementor Page Builder',
+			'name'     => __( 'Elementor Page Builder', 'busify' ),
 			'slug'     => 'elementor',
-			'required' => true,
+			'required' => false,
 		),
 		array(
-			'name'     => 'Contact Form by WPForms',
+			'name'     => __( 'Contact Form by WPForms', 'busify' ),
 			'slug'     => 'wpforms-lite',
-			'required' => true,
+			'required' => false,
 		),
 	);
 
@@ -39,9 +39,8 @@ function busify_register_required_plugins() {
 
 	$config = array(
 		'id'           => 'busify',
-		'default_path' => CODEMANAS_THEME_DIR . 'assets/plugins/',
 		'menu'         => 'tgmpa-install-plugins',
-		'parent_slug'  => 'busify-theme',
+		'parent_slug'  => 'themes.php',
 		'capability'   => 'edit_theme_options',
 		'has_notices'  => true,
 		'dismissable'  => true,

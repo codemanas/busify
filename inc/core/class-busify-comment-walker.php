@@ -36,7 +36,7 @@ class Busify_Comment_Walker extends Walker_Comment {
             </div>
             <div class="comment-content-reply">
 				<?php
-				edit_comment_link( __( 'Edit' ), '<div class="edit-link list-inline-item"><i class="fa fa-edit"></i> ', '</div>' );
+				edit_comment_link( __( 'Edit', 'busify' ), '<div class="edit-link list-inline-item"><i class="fa fa-edit"></i> ', '</div>' );
 
 				comment_reply_link( array_merge( $args, array(
 					'add_below' => 'div-comment',
@@ -50,7 +50,7 @@ class Busify_Comment_Walker extends Walker_Comment {
         </div>
         <div class="comment-body" id="div-comment-<?php comment_ID(); ?>">
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-                <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+                <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'busify' ); ?></p>
 			<?php endif; ?>
             <div class="comment-content">
 				<?php comment_text(); ?>
@@ -74,7 +74,7 @@ if ( ! function_exists( 'busify_comment_author_link' ) ) {
 			if ( $user ) {
 				$author = ! empty( $user->first_name ) && ! empty( $user->last_name ) ? $user->first_name . ' ' . $user->last_name : $user->display_name;
 			} else {
-				$author = __( 'Anonymous' );
+				$author = __( 'Anonymous', 'busify' );
 			}
 		}
 
@@ -82,7 +82,7 @@ if ( ! function_exists( 'busify_comment_author_link' ) ) {
 		if ( ( empty( $url ) || 'http://' == $url ) && ! $valid_uri ) {
 			$result = $author;
 		} else {
-			$result = "<a href='$url' rel='external nofollow ugc' class='url'>$author</a>";
+			$result = '<a href=' . esc_url( $url ). 'rel="external nofollow ugc" class="url">' . esc_html( $author ) . '</a>';
 		}
 
 		return apply_filters( 'busify_get_comment_author_link', $result, $author, $comment_id );
@@ -102,9 +102,9 @@ if ( ! function_exists( 'busify_show_comments' ) ) {
 				$code_manas_comment_count = get_comments_number();
 				if ( '1' === $code_manas_comment_count ) {
 					printf( /* translators: 1: title. */
-						esc_html__( '1 comment', 'code-manas' ), '<span>' . get_the_title() . '</span>' );
+						esc_html__( '1 comment', 'busify' ), '<span>' . get_the_title() . '</span>' );
 				} else {
-					printf( esc_html( _nx( '%1$s comment', '%1$s comments', $code_manas_comment_count, 'comments title', 'code-manas' ) ), number_format_i18n( $code_manas_comment_count ), '<span>' . get_the_title() . '</span>' );
+					printf( esc_html( _nx( '%1$s comment', '%1$s comments', absint( $code_manas_comment_count ), 'comments title', 'busify' ) ), number_format_i18n( $code_manas_comment_count ), '<span>' . esc_html( get_the_title() ) . '</span>' );
 				}
 				?>
 				</span>

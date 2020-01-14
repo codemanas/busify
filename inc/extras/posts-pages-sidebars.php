@@ -163,6 +163,8 @@ if ( ! function_exists( 'busify_content_post_sortable' ) ) {
 							<?php
 							if ( is_singular() ) :
 								the_content();
+								wp_link_pages();
+
 							else:
 								the_excerpt();
 							endif;

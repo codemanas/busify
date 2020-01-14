@@ -26,6 +26,8 @@
 
 <body <?php body_class( 'busify-theme-template' ); ?>>
 
+<?php wp_body_open(); ?>
+
 <?php busify_body_top(); ?>
 
 <div id="page" class="site">

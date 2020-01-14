@@ -16,9 +16,9 @@ get_header();
         <main id="main" class="site-main">
 
             <section class="error-404 not-found">
-                <h1 class="page-title-404">404</h1>
-                <h3><?php esc_html_e( 'We sincerely apologize.', CODEMANAS_THEME_DOMAIN ); ?></h3>
-                <p><?php esc_html_e( 'The page you are looking for is no longer here. Maybe it was never here in the first place. Try searching again with the field below !', CODEMANAS_THEME_DOMAIN ); ?></p>
+                <h1 class="page-title-404"><?php esc_html_e( '404', 'busify' ) ?></h1>
+                <h3><?php esc_html_e( 'We sincerely apologize.', 'busify' ); ?></h3>
+                <p><?php esc_html_e( 'The page you are looking for is no longer here. Maybe it was never here in the first place. Try searching again with the field below !', 'busify' ); ?></p>
 
 				<?php get_search_form(); ?>
             </section><!-- .error-404 -->

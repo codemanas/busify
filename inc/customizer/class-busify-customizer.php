@@ -78,11 +78,6 @@ class Busify_Customizer {
 		require CODEMANAS_THEME_DIR . 'inc/customizer/class-busify-customizer-register-panels.php';
 		require CODEMANAS_THEME_DIR . 'inc/customizer/class-busify-customizer-register-sections.php';
 		require CODEMANAS_THEME_DIR . 'inc/customizer/class-busify-customizer-register-fields.php';
-
-		//WooCommerce Fields
-		if ( is_woocommerce_active() ) {
-			require CODEMANAS_THEME_DIR . 'inc/customizer/class-busify-customizer-woocommerce.php';
-		}
 	}
 
 	public function register_customizer_settings() {

@@ -43,16 +43,12 @@ function busify_after_menu_items_adds_last( $items, $args ) {
 						    <div id="search-box">
 						      <i id="busify-close-btn" class="fa fa-times fa-2x"></i>
 						      <form role="search" action="' . esc_url( home_url( '/' ) ) . '" id="search-form" method="get" target="_top">
-						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . __( "Search Something...", CODEMANAS_THEME_DOMAIN ) . '" type="text" />
-						        <button id="search-button" type="submit"><span>' . __( "Search", CODEMANAS_THEME_DOMAIN ) . '</span></button>
+						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . __( "Search Something...", 'busify' ) . '" type="text" />
+						        <button id="search-button" type="submit"><span>' . __( "Search", 'busify' ) . '</span></button>
 						      </form>
 						    </div>
 						  </div>
 						</div>';
-		}
-
-		if ( is_woocommerce_active() && $header_last_item === "woocommerce" ) {
-			$items .= '<li id="menu-item-989898" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-989898 menu-item-cart"><a href="#"><i class="fa fa-shopping-cart"></i></a></li>';
 		}
 
 		if ( ! empty( $header_last_item ) && $header_last_item === "button" ) {
@@ -65,7 +61,7 @@ function busify_after_menu_items_adds_last( $items, $args ) {
 
 		if ( ! empty( $header_last_item ) && $header_last_item === "text/html" ) {
 			$html  = Busify_Theme_Options::get_option( 'field-header-menu-last-item-btn-custom-text' );
-			$items .= '<li id="menu-item-9898999" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9898999">' . $html . '</li>';
+			$items .= '<li id="menu-item-9898999" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9898999">' . wp_kses( $html ) . '</li>';
 		}
 	}
 
@@ -93,16 +89,12 @@ function busify_after_menu_items_adds_before( $items, $args ) {
 						    <div id="search-box">
 						      <i id="busify-close-btn" class="fa fa-times fa-2x"></i>
 						      <form role="search" action="' . esc_url( home_url( '/' ) ) . '" id="search-form" method="get" target="_top">
-						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . __( "Search Something...", CODEMANAS_THEME_DOMAIN ) . '" type="text" />
-						        <button id="search-button" type="submit"><span>' . __( "Search", CODEMANAS_THEME_DOMAIN ) . '</span></button>
+						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . __( "Search Something...", 'busify' ) . '" type="text" />
+						        <button id="search-button" type="submit"><span>' . __( "Search", 'busify' ) . '</span></button>
 						      </form>
 						    </div>
 						  </div>
 						</div>';
-		}
-
-		if ( is_woocommerce_active() ) {
-			$new_items .= '<li id="menu-item-989898" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-989898 menu-item-cart"><a href="#"><i class="fa fa-shopping-cart"></i></a></li>';
 		}
 
 		if ( ! empty( $header_last_item ) && $header_last_item === "button" ) {
@@ -115,7 +107,7 @@ function busify_after_menu_items_adds_before( $items, $args ) {
 
 		if ( ! empty( $header_last_item ) && $header_last_item === "text/html" ) {
 			$html  = Busify_Theme_Options::get_option( 'field-header-menu-last-item-btn-custom-text' );
-			$items .= '<li id="menu-item-9898999" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9898999">' . $html . '</li>';
+			$items .= '<li id="menu-item-9898999" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9898999">' . wp_kses( $html ) . '</li>';
 		}
 
 		$items = $new_items . $items;

@@ -10,6 +10,6 @@
 
 <div class="busify-super-footer">
     <div class="container">
-		<?php echo $footer; ?>
+		<?php echo wp_kses_post( $footer ); ?>
     </div>
 </div>

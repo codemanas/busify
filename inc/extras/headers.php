@@ -38,12 +38,12 @@ function busify_masthead_logo() {
 
 		if ( ! empty( $site_title_enable ) ) {
 			?>
-            <h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $display_site_title; ?></a></h3>
+            <h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $display_site_title ); ?></a></h3>
 			<?php
 		}
 
 		if ( ! empty( $site_tagline_enable ) ) { ?>
-            <p class="site-tagline"><?php echo $display_site_tagline; ?></p>
+            <p class="site-tagline"><?php echo esc_html( $display_site_tagline ); ?></p>
 		<?php } ?>
     </div>
 	<?php
