@@ -2,7 +2,7 @@
 Contributors: codemanas
 Requires at least: 5.1
 Tested up to: 5.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,14 +20,18 @@ An answer to that question.
 
 == Changelog ==
 
+= 1.0.1 =
+* Update screenshot.
+* Fix minor issues.
+
 = 1.0.0 =
 * Inital release
 
 == Upgrade Notice ==
 
 == Screenshots ==
-License:
-Source:
+License: CC0
+Source: https://stocksnap.io/photo/RYM2WIKREP
 
 = 1.0 =
 * Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.

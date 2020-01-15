@@ -72,10 +72,10 @@ final class Busify_Customize {
 				$manager,
 				'Busify',
 				array(
-					'title'    => esc_html__( 'Busify Pro', 'busify' ),
-					'pro_text' => esc_html__( 'Go Pro',         'busify' ),
-					'pro_url'  => 'https://codemanas.com/busify-pro',
-					'priority' => 999
+					'title'    => esc_html__( 'More Options in Busify Pro', 'busify' ),
+					'pro_text' => esc_html__( 'View Pro',         'busify' ),
+					'pro_url'  => 'https://www.codemanas.com/downloads/busify-pro-multi-purpose-responsive-theme/',
+					'priority' => 1
 				)
 			)
 		);

@@ -799,8 +799,6 @@ figure.wp-block-table.is-style-stripes { border-bottom: none; }
 
 header.site-header { position: relative; top: 0; width: 100%; z-index: 99; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 
-header.site-header.busify-header-transparent { position: absolute; }
-
 header.site-header.sticky-header { position: fixed; -webkit-animation: smoothScroll 1s forwards; animation: smoothScroll 1s forwards; }
 
 @-webkit-keyframes smoothScroll { 0% { -webkit-transform: translateY(-40px); transform: translateY(-40px); }
@@ -823,7 +821,7 @@ header.site-header .site-header-container { display: -webkit-box; display: flex;
 
 header.site-header .site-header-container .site-branding .site-title { margin: 0; line-height: initial; }
 
-header.site-header .site-header-container .site-branding .site-tagline { padding: 0; margin: 0; }
+header.site-header .site-header-container .site-branding .site-tagline { padding: 0; margin: 0; color: #fff; }
 
 .busify-image-banner-overlay { padding: 150px 0 50px 0; }
 
@@ -1091,7 +1089,7 @@ input[type=button], input[type=submit], button, .btn, .woocommerce a.button, .wo
 
 .busify-image-banner-title { color: #ffffff; }
 
-header.busify-header-transparent { background: rgba(255, 255, 255, 0); }
+header.busify-header-transparent { background: rgba(10, 10, 10, 0.75); }
 
 header.busify-no-transparent { background: #fff; }
 

@@ -104,6 +104,7 @@ if ( ! function_exists( 'busify_show_comments' ) ) {
 					printf( /* translators: 1: title. */
 						esc_html__( '1 comment', 'busify' ), '<span>' . get_the_title() . '</span>' );
 				} else {
+					/* translators: 1: comment. */
 					printf( esc_html( _nx( '%1$s comment', '%1$s comments', absint( $code_manas_comment_count ), 'comments title', 'busify' ) ), number_format_i18n( $code_manas_comment_count ), '<span>' . esc_html( get_the_title() ) . '</span>' );
 				}
 				?>
