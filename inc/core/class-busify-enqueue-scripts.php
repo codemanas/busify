@@ -37,7 +37,6 @@ if ( ! class_exists( 'Busify_Enqueue_Scripts' ) ) {
 			$default_assets = array(
 				'js' => array(
 					'busify-js' => 'main',
-					'skip-link-focus-fix-js' => 'skip-link-focus-fix',
 				),
 
 				'css' => array(

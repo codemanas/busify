@@ -73,9 +73,12 @@ function styles() {
 function scripts() {
     return gulp.src(paths.scripts.src, {sourcemaps: true})
         .pipe(babel())
-        .pipe(uglify())
+        .pipe(concat('main.js'))
         .pipe(gulp.dest(paths.scripts.dest))
-        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(rename({
+            suffix:'.min'
+        }))    
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
