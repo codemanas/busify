@@ -183,7 +183,7 @@ class Busify_Theme_Options {
 			),
 			'field-blog-post-pagination'                      => 'load-more',
 			'field-footer-bar-enable'                         => true,
-			'field-footer-bar-copyright'                      => '<p>' . __( 'Copyright &#169; ', 'busify' ) . date( 'Y' ) . __( '. All rights reserved.</p><p>Powered by <strong>WordPress</strong></p>', 'busify' ),
+			'field-footer-bar-copyright'                      => '<p>' . __( 'Copyright &#169; ', 'busify' ) . date_i18n( __( 'Y' , 'busify' ) ) . __( '. All rights reserved.</p><p>Powered by <strong>WordPress</strong></p>', 'busify' ),
 			'field-sidebar-type'                              => 'right',
 			'field-header-menu-last-item-btn-link'            => esc_url( 'https://www.codemanas.com/' ),
 			'field-header-menu-last-item-btn-color'           => '#254099',

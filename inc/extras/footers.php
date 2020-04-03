@@ -20,10 +20,10 @@ if ( ! function_exists( 'busify_get_footer_widgets' ) ) {
 		switch ( $layout ) {
 			case 'wd-four':
 				$footer_widgets = array(
-					'footer-one'   => 'Footer 1',
-					'footer-two'   => 'Footer 2',
-					'footer-three' => 'Footer 3',
-					'footer-four'  => 'Footer 4',
+					'footer-one'   => esc_html__( 'Footer 1', 'busify' ),
+					'footer-two'   => esc_html__( 'Footer 2', 'busify' ),
+					'footer-three' => esc_html__( 'Footer 3', 'busify' ),
+					'footer-four'  => esc_html__( 'Footer 4', 'busify' ),
 				);
 
 				foreach ( $footer_widgets as $k => $footer_widget ) {

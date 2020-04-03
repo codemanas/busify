@@ -299,6 +299,8 @@ sup { top: -.5em; }
 
 a { color: #4054b2; text-decoration: none; background-color: transparent; }
 
+a:focus { outline: thin dotted; }
+
 pre, code, kbd, samp { font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1em; }
 
 pre { margin-top: 0; margin-bottom: 1rem; overflow: auto; }
@@ -379,15 +381,15 @@ figcaption a, .wp-caption-text a { color: inherit; }
 
 .bypostauthor .comment-footer-meta .by-post-author { display: block; }
 
-/* Skip Link --------------------------------- */
-.skip-link { left: -9999rem; top: 2.5rem; z-index: 999999999; text-decoration: underline; }
-
-.skip-link:focus { display: block; left: 6px; top: 7px; font-size: 14px; font-weight: 600; text-decoration: none; line-height: normal; padding: 15px 23px 14px; z-index: 100000; right: auto; }
-
 /* Screen Reader Text ------------------------ */
 .screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; word-break: normal; }
 
 .screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; -webkit-clip-path: none; clip-path: none; color: #21759b; display: block; font-size: 14px; font-size: 0.875rem; font-weight: 700; height: auto; right: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
+
+/* Skip Link --------------------------------- */
+.skip-link { left: -9999rem; top: 2.5rem; z-index: 999999999; text-decoration: underline; }
+
+.skip-link:focus { display: block; left: 6px; top: 7px; font-size: 14px; font-weight: 600; text-decoration: none; line-height: normal; padding: 15px 23px 14px; z-index: 100000; right: auto; }
 
 .elementor-html .preloader { display: none; }
 
@@ -763,7 +765,7 @@ figure.wp-block-table.is-style-stripes { border-bottom: none; }
 
 .site-header-container .busify-search-overlay #busify-close-btn { position: fixed; top: 1em; right: 1em; }
 
-.site-header-container .busify-search-overlay #busify-close-btn:hover { color: #777; cursor: pointer; }
+.site-header-container .busify-search-overlay #busify-close-btn:hover, .site-header-container .busify-search-overlay #busify-close-btn:focus { color: #777; cursor: pointer; }
 
 @media (max-width: 767px) { .site-header-container .main-navigation { visibility: hidden; opacity: 0; width: 100%; -webkit-box-flex: 1; flex: auto; margin: 0 -15px; max-height: 0; overflow: hidden; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
   .site-header-container .main-navigation.toggle-active { visibility: visible; opacity: 1; max-height: 1000px; }
@@ -786,7 +788,7 @@ figure.wp-block-table.is-style-stripes { border-bottom: none; }
   .site-header-container .main-navigation .primary-menu .sub-menu-toggle { display: none; }
   .site-header-container .main-navigation .primary-menu > li > .sub-menu:before { content: '\f0d8'; width: 10px; height: 10px; position: absolute; top: -40px; font-family: 'Font Awesome 5 Free'; right: 32px; font-size: 40px; font-weight: 900; }
   .site-header-container .main-navigation .primary-menu li { display: inline-block; padding: 10px; position: relative; }
-  .site-header-container .main-navigation .primary-menu li:hover > ul.sub-menu { top: 100%; opacity: 1; visibility: visible; }
+  .site-header-container .main-navigation .primary-menu li:hover > ul.sub-menu, .site-header-container .main-navigation .primary-menu li.focus > ul.sub-menu, .site-header-container .main-navigation .primary-menu li:focus > ul.sub-menu { top: 100%; opacity: 1; visibility: visible; }
   .site-header-container .main-navigation .primary-menu li ul.sub-menu { position: absolute; top: 150%; opacity: 0; visibility: hidden; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; padding: 0; display: -webkit-box; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; width: 300px; right: 0; }
   .site-header-container .main-navigation .primary-menu li ul.sub-menu li:first-child { border-top: none; }
   .site-header-container .main-navigation .primary-menu li ul.sub-menu > li { border-top: 1px solid; padding: 0; }
@@ -820,6 +822,8 @@ header.site-header.busify-center-logo .site-header-container .main-navigation { 
 header.site-header .site-header-container { display: -webkit-box; display: flex; flex-wrap: wrap; -webkit-box-align: center; align-items: center; -webkit-box-pack: justify; justify-content: space-between; padding: 1.25rem 0; }
 
 header.site-header .site-header-container .site-branding .site-title { margin: 0; line-height: initial; }
+
+header.site-header .site-header-container .site-branding .site-title a { color: #fff; }
 
 header.site-header .site-header-container .site-branding .site-tagline { padding: 0; margin: 0; color: #fff; }
 

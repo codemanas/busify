@@ -74,6 +74,9 @@ header.site-header {
 
     .site-branding {
       .site-title {
+        a {
+          color: #fff;
+        }
         margin: 0;
         line-height: initial;
       }

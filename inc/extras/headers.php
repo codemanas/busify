@@ -56,7 +56,7 @@ function busify_masthead_nav() {
 	?>
     <div class="busify-mobile-menu-buttons">
         <div class="busify-button-wrap">
-            <div class="navigation-toggler-icon"><span class="icon"></span></div>
+            <div class="navigation-toggler-icon"><a href="#"><span class="icon"></span></a></div>
         </div>
     </div>
     <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -65,6 +65,7 @@ function busify_masthead_nav() {
 			'theme_location' => 'primary-menu',
 			'menu_id'        => 'primary-menu',
 			'menu_class'     => 'primary-menu',
+			'container_class' => 'menu-primary-menu-container',
 		) );
 		?>
     </nav>
@@ -154,7 +155,7 @@ function busify_add_submenu_indicator( $item_output, $item, $depth, $args ) {
 	if ( $args->theme_location == 'primary-menu' ) {
 		//var_dump($item);
 		if ( in_array( 'menu-item-has-children', $item->classes ) ) {
-			$item_output .= '<span class="sub-menu-toggle"><i class="fas fa-caret-down"></i></span>';
+			$item_output .= '<span class="sub-menu-toggle"><a href="#"><i class="fas fa-caret-down"></i></a></span>';
 		}
 	}
 

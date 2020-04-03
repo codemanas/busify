@@ -118,7 +118,8 @@
       top: 1em;
       right: 1em;
     }
-    #busify-close-btn:hover {
+    #busify-close-btn:hover,
+    #busify-close-btn:focus {
       color: #777;
       cursor: pointer;
     }
@@ -250,7 +251,9 @@
           padding: 10px;
           position: relative;
 
-          &:hover > ul.sub-menu {
+          &:hover > ul.sub-menu,
+          &.focus > ul.sub-menu,
+          &:focus > ul.sub-menu {
             top: 100%;
             opacity: 1;
             visibility: visible;

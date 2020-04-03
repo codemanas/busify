@@ -116,7 +116,7 @@ endif;
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  */
 function busify_skip_link() {
-	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'busify' ) . '</a>';
+	echo '<a class="skip-link screen-reader-text" href="#content">' . __( 'Skip to the content', 'busify' ) . '</a>';
 }
 
 add_action( 'wp_body_open', 'busify_skip_link', 5 );
