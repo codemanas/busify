@@ -211,6 +211,7 @@ jQuery(function ($) {
             e.preventDefault();
             $(this).hide();
             $('#busify-search-overlay').fadeIn();
+            $('#busify-search-overlay #search-text').focus();
         },
 
         /**
