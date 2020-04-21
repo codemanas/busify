@@ -107,8 +107,6 @@ if ( ! class_exists( 'Busify_Theme_Setup' ) ) {
 				'flex-height' => true,
 			) );
 
-
-			add_image_size( 'thumbnail-medium', 600, 600, true );
 		}
 	}
 

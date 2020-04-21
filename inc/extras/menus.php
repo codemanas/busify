@@ -42,7 +42,7 @@ function busify_after_menu_items_adds_last( $items, $args ) {
 						  <div class="centered">
 						    <div id="search-box">
 						      <form role="search" action="' . esc_url( home_url( '/' ) ) . '" id="search-form" method="get" target="_top">
-						        <input id="search-text" value="' . esc_attr( get_search_query() ) . '" name="s" placeholder="' . __( "Search Something...", 'busify' ) . '" type="text" />
+						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . esc_attr__( "Search Something...", 'busify' ) . '" type="text" />
 						        <button id="search-button" type="submit"><span>' . __( "Search", 'busify' ) . '</span></button>
 						      	<i id="busify-close-btn" class="fa fa-times fa-2x"><a href="#"></a></i>
 						      </form>
@@ -88,7 +88,7 @@ function busify_after_menu_items_adds_before( $items, $args ) {
 						  <div class="centered">
 						    <div id="search-box">
 						      <form role="search" action="' . esc_url( home_url( '/' ) ) . '" id="search-form" method="get" target="_top">
-						        <input id="search-text" value="' . esc_attr( get_search_query() ) . '" name="s" placeholder="' . __( "Search Something...", 'busify' ) . '" type="text" />
+						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . esc_attr__( "Search Something...", 'busify' ) . '" type="text" />
 						        <button id="search-button" type="submit"><span>' . __( "Search", 'busify' ) . '</span></button>
 						      	<i id="busify-close-btn" class="fa fa-times fa-2x"><a href="#"></a></i>
 						      </form>

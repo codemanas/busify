@@ -54,9 +54,9 @@ function busify_masthead_logo() {
  */
 function busify_masthead_nav() {
 	?>
-    <div class="busify-mobile-menu-buttons">
-        <div class="busify-button-wrap">
-            <div class="navigation-toggler-icon"><a href="#"><span class="icon"></span></a></div>
+    <div tabindex="0" class="busify-mobile-menu-buttons">
+        <div  class="busify-button-wrap">
+            <div class="navigation-toggler-icon"><a href="#"><i class="fas fa-bars"></i><!-- <span class="icon"></span> --></a></div>
         </div>
     </div>
     <nav id="site-navigation" class="main-navigation" role="navigation">

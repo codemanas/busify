@@ -22,9 +22,11 @@ jQuery(function ($) {
       });
     },
     _cacheDOM: function () {
+      dom.$body = $('body');
       dom.$headerElement = $('header#masthead');
       dom.$mainNav = $('.main-navigation');
       dom.$mainNavBurger = $('.navigation-toggler-icon');
+      dom.$wpadminbar = $('#wpadminbar');
       this.$searchIconMenu = $('.menu-item-search');
       this.$searchIconMenuClse = $('#busify-close-btn'); //Ajax Pagination
 
@@ -51,6 +53,7 @@ jQuery(function ($) {
       dom.$mainNav.on('click', '.sub-menu-toggle', this.expandMobileChildrenMenu.bind(this)); //Ajax load more btn
 
       if (dom.$paginationType === "load-more") {
+        $('#busify-ajax-load-more').focus();
         this.$loadMoreButton.on('click', this.ajaxLoadMorePosts.bind(this));
       } //Mobile Sizing
 
@@ -114,9 +117,15 @@ jQuery(function ($) {
 
       var scrollPosition = $(window).scrollTop();
 
+      if (dom.$wpadminbar.length > 0) {
+        var adminBarHeight = dom.$wpadminbar.height();
+      }
+
       if (scrollPosition > headerHeight) {
+        $(dom.$headerElement).css('top', adminBarHeight);
         $(dom.$headerElement).addClass('sticky-header');
       } else {
+        $(dom.$headerElement).css('top', 0);
         $(dom.$headerElement).removeClass('sticky-header');
       }
     },

@@ -9,7 +9,14 @@
       top: 100px;
       left: 120px;
       transition-duration: 0.5s;
-
+      
+      a {
+        color: #fff;
+        font-size: 30px;
+        &:focus {
+          outline-offset: 1px;
+        }
+      }
       .icon {
         transition-duration: 0.5s;
         position: absolute;

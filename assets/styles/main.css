@@ -299,7 +299,7 @@ sup { top: -.5em; }
 
 a { color: #4054b2; text-decoration: none; background-color: transparent; }
 
-a:focus { outline: thin dotted; }
+a:focus { outline: thin dotted; outline-offset: -4px; }
 
 pre, code, kbd, samp { font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1em; }
 
@@ -420,6 +420,8 @@ figcaption a, .wp-caption-text a { color: inherit; }
 .busify-scroll .fa { font-size: 30px; transition: 0.5s; -moz-transition: 0.5s; -webkit-transition: 0.5s; -o-transition: 0.5s; color: #fff; }
 
 .busify-elementor-page-template .wpforms-field-container .wpforms-field input[type="text"], .busify-elementor-page-template .wpforms-field-container .wpforms-field input[type="email"], .busify-elementor-page-template .wpforms-field-container .wpforms-field textarea { padding: 25px 20px; border: 1px solid #ececec; }
+
+textarea:focus, button:focus, input[type="checkbox"]:focus, input[type="search"]:focus, input[type="submit"]:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus { outline: thin dotted; outline-offset: -4px; }
 
 .form-control { display: block; width: 100%; padding: 0.375rem 0.75rem; line-height: 1.5; background-color: #fff; background-clip: padding-box; border: 1px solid #dee2e6; -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
 
@@ -739,6 +741,10 @@ figure.wp-block-table.is-style-stripes { border-bottom: none; }
 
 .site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon { width: 25px; top: 100px; left: 120px; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; }
 
+.site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon a { color: #fff; font-size: 30px; }
+
+.site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon a:focus { outline-offset: 1px; }
+
 .site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon .icon { -webkit-transition-duration: 0.5s; transition-duration: 0.5s; position: absolute; height: 3px; width: 25px; background-color: #000; }
 
 .site-header-container .busify-mobile-menu-buttons .navigation-toggler-icon .icon:before { -webkit-transition-duration: 0.5s; transition-duration: 0.5s; position: absolute; width: 25px; height: 3px; background-color: #000; content: ""; top: -10px; }
@@ -945,8 +951,6 @@ header.site-header .site-header-container .site-branding .site-tagline { padding
 .error-404 .search-form .search-submit, .no-results .search-form .search-submit { width: 100%; }
 
 .busify-pagination { position: relative; }
-
-.busify-pagination button { outline: 0; }
 
 .busify-pagination.left-align-pagination { text-align: left; }
 
