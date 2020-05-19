@@ -2,7 +2,7 @@
 Contributors: codemanas
 Requires at least: 5.1
 Tested up to: 5.3
-Stable tag: 1.0.7
+Stable tag: 1.0.6
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,10 +20,8 @@ An answer to that question.
 
 == Changelog ==
 
-= 1.0.7 =
-* Add feature to close mobile menu on scroll
-
 = 1.0.6 =
+* Add feature to close mobile menu on scroll
 * Add One Click Demo importer in recommended plugin
 
 = 1.0.5 =
