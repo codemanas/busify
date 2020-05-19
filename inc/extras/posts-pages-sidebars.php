@@ -18,14 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return mixed
  */
-function get_busify_sidebar_style( $sidebar ) {
+function busify_get_sidebar_style( $sidebar ) {
 	if ( $sidebar === "left" ) {
 		$result = 'left-sidebar';
 	} else if ( $sidebar === "right" ) {
 		$result = 'right-sidebar';
 	} else if ( $sidebar === "default" ) {
 		$result = Busify_Theme_Options::get_option( 'field-sidebar-type' );
-		$result = get_busify_sidebar_style( $result );
+		$result = busify_get_sidebar_style( $result );
 	} else {
 		$result = 'none';
 	}
@@ -36,7 +36,7 @@ function get_busify_sidebar_style( $sidebar ) {
 /**
  * Fetch sidebar layout
  */
-function get_busify_sidebar_layout() {
+function busify_get_sidebar_layout() {
 	if ( ! busify_search_results() ) {
 		return;
 	}
@@ -53,7 +53,7 @@ function get_busify_sidebar_layout() {
 		$sidebar = $global_sidebar;
 
 		if ( $global_sidebar !== "none" ) {
-			$sidebar = get_busify_sidebar_style( $sidebar );
+			$sidebar = busify_get_sidebar_style( $sidebar );
 		}
 
 		return apply_filters( 'busify_sidebar_layout', $sidebar, $sidebar_layout );
@@ -67,7 +67,7 @@ function busify_before_main_content_wrapper_start() {
 	if ( ! busify_search_results() ) {
 		echo "<div class='col-md-12'>";
 	} else if ( ! busify_check_elementor_builtwith() ) {
-		$sidebar_layout = get_busify_sidebar_layout();
+		$sidebar_layout = busify_get_sidebar_layout();
 		if ( $sidebar_layout !== 'none' ) {
 			echo "<div class='col-md-9'>";
 		} else {

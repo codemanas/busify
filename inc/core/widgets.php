@@ -7,8 +7,8 @@
  * @copyright 2019 CodeManas. All Rights Reserved !
  */
 
-add_action( 'widgets_init', 'codemanas_busify_widgets_init' );
-function codemanas_busify_widgets_init() {
+add_action( 'widgets_init', 'busify_widgets_init' );
+function busify_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'busify' ),
 		'id'            => 'sidebar',

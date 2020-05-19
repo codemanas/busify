@@ -131,7 +131,7 @@ if ( ! class_exists( 'Busify_Enqueue_Scripts' ) ) {
 					'disable_mobile' => boolval( Busify_Theme_Options::get_option( 'field-header-menu-sticky-mobile-disable' ) )
 				),
 				'menu_settings'       => array(
-					'disable_search' => boolval( Busify_Theme_Options::get_option( 'field-header-menu-disable-search' ) )
+					'disable_search' => false
 				),
 				'ajaxurl'             => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'ajaxButtonType'      => esc_html( Busify_Theme_Options::get_option( 'field-blog-post-pagination' ) ),

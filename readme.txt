@@ -2,7 +2,7 @@
 Contributors: codemanas
 Requires at least: 5.1
 Tested up to: 5.3
-Stable tag: 1.0.1
+Stable tag: 1.0.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -19,6 +19,28 @@ Busify is a Multi-Purpose theme for WordPress. Focused for Business, E-Commerce 
 An answer to that question.
 
 == Changelog ==
+
+= 1.0.6 =
+* Add One Click Demo importer in recommended plugin
+
+= 1.0.5 =
+* Add theme URI
+
+= 1.0.4 =
+* Fix focus on page load.
+
+= 1.0.3 =
+* Remove search model.
+* Fix accessibility issue on mobile menu.
+* Fix escaping and prefixing issue.
+* Remove unused custom image size.
+
+= 1.0.2 =
+* Fix skip-link-focus issue
+* Fix minor skipping issues
+* Fix translation issues
+* Prefix handle in footers.php
+* Fix keyboard navigation
 
 = 1.0.1 =
 * Update screenshot.

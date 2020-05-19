@@ -180,14 +180,6 @@ class Busify_Customizer_Register_Fields extends Busify_Customizer_Conifg_Base {
 			),
 			array(
 				'category'        => 'field',
-				'type'            => 'checkbox',
-				'settings'        => 'field-header-menu-disable-search',
-				'label'           => esc_html__( 'Disable Search', 'busify' ),
-				'section'         => 'section-header-primary',
-				'default'         => false,
-			),
-			array(
-				'category'        => 'field',
 				'type'            => 'select',
 				'settings'        => 'field-header-menu-last-item',
 				'transport'       => 'auto',

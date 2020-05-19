@@ -35,21 +35,6 @@ function busify_after_menu_items_adds_last( $items, $args ) {
 	$header_last_item = Busify_Theme_Options::get_option( 'field-header-menu-last-item' );
 
 	if ( $args->theme_location === "primary-menu" ) {
-		$disable_search = Busify_Theme_Options::get_option( 'field-header-menu-disable-search' );
-		if ( ! $disable_search ) {
-			$items .= '<li id="menu-item-98989" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98989 menu-item-search"><a href="#"><i class="fa fa-search"></i></a></li>';
-			$items .= '<div id="busify-search-overlay" class="busify-search-overlay">
-						  <div class="centered">
-						    <div id="search-box">
-						      <form role="search" action="' . esc_url( home_url( '/' ) ) . '" id="search-form" method="get" target="_top">
-						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . esc_attr__( "Search Something...", 'busify' ) . '" type="text" />
-						        <button id="search-button" type="submit"><span>' . __( "Search", 'busify' ) . '</span></button>
-						      	<i id="busify-close-btn" class="fa fa-times fa-2x"><a href="#"></a></i>
-						      </form>
-						    </div>
-						  </div>
-						</div>';
-		}
 
 		if ( ! empty( $header_last_item ) && $header_last_item === "button" ) {
 			$btn_text = Busify_Theme_Options::get_option( 'field-header-menu-last-item-button-texxt' );
@@ -80,22 +65,7 @@ function busify_after_menu_items_adds_before( $items, $args ) {
 	$header_last_item = Busify_Theme_Options::get_option( 'field-header-menu-last-item' );
 
 	if ( $args->theme_location === "primary-menu" ) {
-		$disable_search = Busify_Theme_Options::get_option( 'field-header-menu-disable-search' );
 		$new_items      = '';
-		if ( ! $disable_search ) {
-			$new_items .= '<li id="menu-item-98989" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98989 menu-item-search"><a href="#"><i class="fa fa-search"></i></a></li>';
-			$new_items .= '<div id="busify-search-overlay" class="busify-search-overlay">
-						  <div class="centered">
-						    <div id="search-box">
-						      <form role="search" action="' . esc_url( home_url( '/' ) ) . '" id="search-form" method="get" target="_top">
-						        <input id="search-text" value="' . get_search_query() . '" name="s" placeholder="' . esc_attr__( "Search Something...", 'busify' ) . '" type="text" />
-						        <button id="search-button" type="submit"><span>' . __( "Search", 'busify' ) . '</span></button>
-						      	<i id="busify-close-btn" class="fa fa-times fa-2x"><a href="#"></a></i>
-						      </form>
-						    </div>
-						  </div>
-						</div>';
-		}
 
 		if ( ! empty( $header_last_item ) && $header_last_item === "button" ) {
 			$btn_text = Busify_Theme_Options::get_option( 'field-header-menu-last-item-button-texxt' );

@@ -15,7 +15,7 @@ get_header();
     <div id="primary" class="content-area">
         <div <?php echo busify_page_post_class_row_class(); ?>>
 			<?php
-			if ( get_busify_sidebar_layout() === "left-sidebar" ) {
+			if ( busify_get_sidebar_layout() === "left-sidebar" ) {
 				get_sidebar();
 			}
 
@@ -52,7 +52,7 @@ get_header();
 			<?php
 			busify_after_main_content();
 
-			if ( get_busify_sidebar_layout() === "right-sidebar" ) {
+			if ( busify_get_sidebar_layout() === "right-sidebar" ) {
 				get_sidebar();
 			}
 			?>

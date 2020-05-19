@@ -12,10 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! isset( $content_width ) ) {
-    $content_width = 820;
-}
-
 if ( ! class_exists( 'Busify_Theme_Setup' ) ) {
 
 	class Busify_Theme_Setup {
@@ -54,6 +50,11 @@ if ( ! class_exists( 'Busify_Theme_Setup' ) ) {
 		 * @since 1.0.0
 		 */
 		public function setup_theme() {
+			// Set content-width.
+			global $content_width;
+			if ( ! isset( $content_width ) ) {
+			    $content_width = 820;
+			}
 
 			load_theme_textdomain( 'busify', get_template_directory() . '/languages' );
 

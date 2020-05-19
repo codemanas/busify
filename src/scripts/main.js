@@ -56,7 +56,7 @@ jQuery(function ($) {
             dom.$mainNav.on('click', '.sub-menu-toggle', this.expandMobileChildrenMenu.bind(this));
             //Ajax load more btn
             if (dom.$paginationType === "load-more") {
-                $('#busify-ajax-load-more').focus();
+                // $('#busify-ajax-load-more').focus();
                 this.$loadMoreButton.on('click', this.ajaxLoadMorePosts.bind(this));
             }
 

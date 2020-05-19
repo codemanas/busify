@@ -82,7 +82,7 @@ class Busify_Admin_Settings {
                                 <h3><i class="dashicons dashicons-admin-site-alt2"></i> <?php esc_html_e( 'Customizer Settings', 'busify' ); ?></h3>
                                 <div class="busify-row">
                                     <div class="busify-column"><i class="dashicons dashicons-editor-kitchensink"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-global-container-width' ) ); ?>"><?php esc_html_e( 'Global Layouts', 'busify' ); ?></a></div>
-                                    <div class="busify-column"><i class="dashicons dashicons-editor-textcolor"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-header-menu-disable-search' ) ); ?>"><?php esc_html_e( 'Menu Layouts', 'busify' ); ?></a></div>
+                                    <div class="busify-column"><i class="dashicons dashicons-editor-textcolor"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=field-header-menu-last-item' ) ); ?>"><?php esc_html_e( 'Menu Layouts', 'busify' ); ?></a></div>
                                 </div>
                                 <div class="busify-row">
                                     <div class="busify-column"><i class="dashicons dashicons-format-image"></i>&nbsp;&nbsp;<a href="<?php echo esc_url( admin_url( '/customize.php?autofocus[control]=custom_logo' ) ); ?>"><?php esc_html_e( 'Upload Logo', 'busify' ); ?></a></div>
