@@ -43,6 +43,10 @@ jQuery(function ($) {
                 this.stickyHeader();
             }
 
+            if ($(window).width() < 785) {
+                $(window).on('scroll', this.closeMobileMenu);
+            }
+
             $(window).on('scroll', this.scrollToTopShow);
             $('.busify-scroll').on('click', this.scrollToTop.bind(this));
 
@@ -131,6 +135,13 @@ jQuery(function ($) {
             } else {
                 $(dom.$headerElement).css('top', 0);
                 $(dom.$headerElement).removeClass('sticky-header');
+            }
+        },
+
+        closeMobileMenu: function() {
+            if( dom.$mainNavBurger.hasClass('toggle-active') ) {
+                dom.$mainNavBurger.removeClass('toggle-active');
+                dom.$mainNav.removeClass('toggle-active');
             }
         },
 

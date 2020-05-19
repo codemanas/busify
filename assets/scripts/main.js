@@ -133,9 +133,8 @@ jQuery(function ($) {
         $(dom.$headerElement).removeClass('sticky-header');
       }
     },
-
-    closeMobileMenu: function() {
-      if( dom.$mainNavBurger.hasClass('toggle-active') ) {
+    closeMobileMenu: function () {
+      if (dom.$mainNavBurger.hasClass('toggle-active')) {
         dom.$mainNavBurger.removeClass('toggle-active');
         dom.$mainNav.removeClass('toggle-active');
       }
