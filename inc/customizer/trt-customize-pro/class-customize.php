@@ -74,7 +74,7 @@ final class Busify_Customize {
 				array(
 					'title'    => esc_html__( 'More Options in Busify Pro', 'busify' ),
 					'pro_text' => esc_html__( 'View Pro',         'busify' ),
-					'pro_url'  => 'https://www.codemanas.com/downloads/busify-pro-multi-purpose-responsive-theme/',
+					'pro_url'  => 'https://www.codemanas.com/downloads/busify-pro/',
 					'priority' => 1
 				)
 			)
