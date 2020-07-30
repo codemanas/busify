@@ -41,7 +41,6 @@ jQuery(function ($) {
       }
 
       if ($(window).width() < 785) {
-        console.log('hey');
         $(window).on('scroll', this.closeMobileMenu);
       }
 

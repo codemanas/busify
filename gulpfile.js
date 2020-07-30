@@ -10,6 +10,8 @@ const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const merge = require("merge-stream");
 const del = require('del');
+const wpPot = require('gulp-wp-pot');
+
 
 const paths = {
     styles: {
@@ -87,6 +89,16 @@ function watchFiles() {
     gulp.watch(paths.styles.src, styles);
 }
 
+ 
+function potFile() {
+    return gulp.src('./**/*.php')
+        .pipe(wpPot( {
+            domain: 'busify',
+            package: 'Busify'
+        } ))
+        .pipe(gulp.dest('./languages/busify.pot'));
+}
+
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
@@ -102,6 +114,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.watch = watch;
 exports.build = build;
+exports.potFile = potFile;
 /*
  * Define default task that can be called by just running `gulp` from cli
  */

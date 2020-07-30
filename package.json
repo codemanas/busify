@@ -21,7 +21,8 @@
   "license": "GPL-2.0-only",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "gulp-wp-pot": "^2.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
